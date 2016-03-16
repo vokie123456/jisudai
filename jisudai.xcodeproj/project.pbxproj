@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F7FF2B772D5573A48E68B20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFF7A3F2BF16D036C8E217C /* libPods.a */; };
 		AE7A01091C9675A60058045F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01081C9675A60058045F /* main.m */; };
 		AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A010B1C9675A60058045F /* AppDelegate.m */; };
-		AE7A010F1C9675A60058045F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A010E1C9675A60058045F /* ViewController.m */; };
 		AE7A01121C9675A60058045F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7A01101C9675A60058045F /* Main.storyboard */; };
 		AE7A01141C9675A60058045F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7A01131C9675A60058045F /* Assets.xcassets */; };
 		AE7A01171C9675A60058045F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7A01151C9675A60058045F /* LaunchScreen.storyboard */; };
 		AE7A01221C9675A60058045F /* jisudaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01211C9675A60058045F /* jisudaiTests.m */; };
 		AE7A012D1C9675A60058045F /* jisudaiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A012C1C9675A60058045F /* jisudaiUITests.m */; };
+		AE7A013F1C96AF110058045F /* JCCBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A013E1C96AF110058045F /* JCCBaseWebViewController.m */; };
+		AE7A01421C96AF200058045F /* MKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01411C96AF200058045F /* MKWebView.m */; };
+		AE7A01461C96AFBD0058045F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01451C96AFBD0058045F /* MainViewController.m */; };
+		AE7A014A1C96B0000058045F /* DaikuanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01491C96B0000058045F /* DaikuanViewController.m */; };
+		AE7A014D1C96B00F0058045F /* CreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A014C1C96B00F0058045F /* CreditCardViewController.m */; };
+		AE7A01501C96BEB60058045F /* ZYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A014F1C96BEB60058045F /* ZYNavigationViewController.m */; };
+		AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01521C96C4D30058045F /* ZYTabViewController.m */; };
+		AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01551C96C4EF0058045F /* UIColor+Extend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1E92D080D59A954FB1AF1F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE7A01041C9675A60058045F /* jisudai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jisudai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7A01081C9675A60058045F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE7A010A1C9675A60058045F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE7A010B1C9675A60058045F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AE7A010D1C9675A60058045F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AE7A010E1C9675A60058045F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AE7A01111C9675A60058045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE7A01131C9675A60058045F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE7A01161C9675A60058045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +58,24 @@
 		AE7A01281C9675A60058045F /* jisudaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jisudaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7A012C1C9675A60058045F /* jisudaiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jisudaiUITests.m; sourceTree = "<group>"; };
 		AE7A012E1C9675A60058045F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7A013D1C96AF110058045F /* JCCBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCBaseWebViewController.h; sourceTree = "<group>"; };
+		AE7A013E1C96AF110058045F /* JCCBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCBaseWebViewController.m; sourceTree = "<group>"; };
+		AE7A01401C96AF200058045F /* MKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKWebView.h; sourceTree = "<group>"; };
+		AE7A01411C96AF200058045F /* MKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKWebView.m; sourceTree = "<group>"; };
+		AE7A01441C96AFBD0058045F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		AE7A01451C96AFBD0058045F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		AE7A01481C96B0000058045F /* DaikuanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaikuanViewController.h; sourceTree = "<group>"; };
+		AE7A01491C96B0000058045F /* DaikuanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaikuanViewController.m; sourceTree = "<group>"; };
+		AE7A014B1C96B00F0058045F /* CreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardViewController.h; sourceTree = "<group>"; };
+		AE7A014C1C96B00F0058045F /* CreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardViewController.m; sourceTree = "<group>"; };
+		AE7A014E1C96BEB60058045F /* ZYNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYNavigationViewController.h; sourceTree = "<group>"; };
+		AE7A014F1C96BEB60058045F /* ZYNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYNavigationViewController.m; sourceTree = "<group>"; };
+		AE7A01511C96C4D30058045F /* ZYTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTabViewController.h; sourceTree = "<group>"; };
+		AE7A01521C96C4D30058045F /* ZYTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTabViewController.m; sourceTree = "<group>"; };
+		AE7A01541C96C4EF0058045F /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
+		AE7A01551C96C4EF0058045F /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
+		DDFF7A3F2BF16D036C8E217C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E239A8D02EA74D23DAC96E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7FF2B772D5573A48E68B20 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		703F736FCA72BD7737F4A9C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1E92D080D59A954FB1AF1F6 /* Pods.debug.xcconfig */,
+				E8E239A8D02EA74D23DAC96E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AE7A00FB1C9675A60058045F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +120,8 @@
 				AE7A01201C9675A60058045F /* jisudaiTests */,
 				AE7A012B1C9675A60058045F /* jisudaiUITests */,
 				AE7A01051C9675A60058045F /* Products */,
+				703F736FCA72BD7737F4A9C6 /* Pods */,
+				FC78667ADE3516AE725D53FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +138,15 @@
 		AE7A01061C9675A60058045F /* jisudai */ = {
 			isa = PBXGroup;
 			children = (
+				AE7A01431C96AFA00058045F /* Common */,
 				AE7A010A1C9675A60058045F /* AppDelegate.h */,
 				AE7A010B1C9675A60058045F /* AppDelegate.m */,
-				AE7A010D1C9675A60058045F /* ViewController.h */,
-				AE7A010E1C9675A60058045F /* ViewController.m */,
+				AE7A01441C96AFBD0058045F /* MainViewController.h */,
+				AE7A01451C96AFBD0058045F /* MainViewController.m */,
+				AE7A01481C96B0000058045F /* DaikuanViewController.h */,
+				AE7A01491C96B0000058045F /* DaikuanViewController.m */,
+				AE7A014B1C96B00F0058045F /* CreditCardViewController.h */,
+				AE7A014C1C96B00F0058045F /* CreditCardViewController.m */,
 				AE7A01101C9675A60058045F /* Main.storyboard */,
 				AE7A01131C9675A60058045F /* Assets.xcassets */,
 				AE7A01151C9675A60058045F /* LaunchScreen.storyboard */,
@@ -140,6 +182,31 @@
 			path = jisudaiUITests;
 			sourceTree = "<group>";
 		};
+		AE7A01431C96AFA00058045F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AE7A01541C96C4EF0058045F /* UIColor+Extend.h */,
+				AE7A01551C96C4EF0058045F /* UIColor+Extend.m */,
+				AE7A01511C96C4D30058045F /* ZYTabViewController.h */,
+				AE7A01521C96C4D30058045F /* ZYTabViewController.m */,
+				AE7A014E1C96BEB60058045F /* ZYNavigationViewController.h */,
+				AE7A014F1C96BEB60058045F /* ZYNavigationViewController.m */,
+				AE7A013D1C96AF110058045F /* JCCBaseWebViewController.h */,
+				AE7A013E1C96AF110058045F /* JCCBaseWebViewController.m */,
+				AE7A01401C96AF200058045F /* MKWebView.h */,
+				AE7A01411C96AF200058045F /* MKWebView.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		FC78667ADE3516AE725D53FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDFF7A3F2BF16D036C8E217C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE7A01311C9675A60058045F /* Build configuration list for PBXNativeTarget "jisudai" */;
 			buildPhases = (
+				9FCAFAF297C184B816A7F709 /* Check Pods Manifest.lock */,
 				AE7A01001C9675A60058045F /* Sources */,
 				AE7A01011C9675A60058045F /* Frameworks */,
 				AE7A01021C9675A60058045F /* Resources */,
+				7DEB6C6F97407102DAB31C5A /* Embed Pods Frameworks */,
+				5CA471D8C75147DA3B3970B9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,14 +335,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CA471D8C75147DA3B3970B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DEB6C6F97407102DAB31C5A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FCAFAF297C184B816A7F709 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE7A01001C9675A60058045F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE7A010F1C9675A60058045F /* ViewController.m in Sources */,
+				AE7A014A1C96B0000058045F /* DaikuanViewController.m in Sources */,
+				AE7A01501C96BEB60058045F /* ZYNavigationViewController.m in Sources */,
+				AE7A013F1C96AF110058045F /* JCCBaseWebViewController.m in Sources */,
 				AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */,
 				AE7A01091C9675A60058045F /* main.m in Sources */,
+				AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */,
+				AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */,
+				AE7A01461C96AFBD0058045F /* MainViewController.m in Sources */,
+				AE7A01421C96AF200058045F /* MKWebView.m in Sources */,
+				AE7A014D1C96B00F0058045F /* CreditCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,9 +534,13 @@
 		};
 		AE7A01321C9675A60058045F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1E92D080D59A954FB1AF1F6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = jisudai/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,9 +549,13 @@
 		};
 		AE7A01331C9675A60058045F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E239A8D02EA74D23DAC96E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = jisudai/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +629,7 @@
 				AE7A01331C9675A60058045F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE7A01341C9675A60058045F /* Build configuration list for PBXNativeTarget "jisudaiTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +638,7 @@
 				AE7A01361C9675A60058045F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE7A01371C9675A60058045F /* Build configuration list for PBXNativeTarget "jisudaiUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +647,7 @@
 				AE7A01391C9675A60058045F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

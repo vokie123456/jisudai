@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MobClick.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,11 @@
 
 @implementation AppDelegate
 
-
+//
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+    [MobClick startWithAppkey:@"56e92d93e0f55aee7f000e98" reportPolicy:SEND_INTERVAL   channelId:@"AppStore"];
     return YES;
 }
 
