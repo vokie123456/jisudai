@@ -23,6 +23,7 @@
 		AE7A01501C96BEB60058045F /* ZYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A014F1C96BEB60058045F /* ZYNavigationViewController.m */; };
 		AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01521C96C4D30058045F /* ZYTabViewController.m */; };
 		AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01551C96C4EF0058045F /* UIColor+Extend.m */; };
+		AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01831C9A487A0058045F /* CreditMessageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		AE7A01521C96C4D30058045F /* ZYTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTabViewController.m; sourceTree = "<group>"; };
 		AE7A01541C96C4EF0058045F /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
 		AE7A01551C96C4EF0058045F /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
+		AE7A01821C9A487A0058045F /* CreditMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditMessageViewController.h; sourceTree = "<group>"; };
+		AE7A01831C9A487A0058045F /* CreditMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditMessageViewController.m; sourceTree = "<group>"; };
 		DDFF7A3F2BF16D036C8E217C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E239A8D02EA74D23DAC96E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +150,8 @@
 				AE7A01491C96B0000058045F /* DaikuanViewController.m */,
 				AE7A014B1C96B00F0058045F /* CreditCardViewController.h */,
 				AE7A014C1C96B00F0058045F /* CreditCardViewController.m */,
+				AE7A01821C9A487A0058045F /* CreditMessageViewController.h */,
+				AE7A01831C9A487A0058045F /* CreditMessageViewController.m */,
 				AE7A01101C9675A60058045F /* Main.storyboard */,
 				AE7A01131C9675A60058045F /* Assets.xcassets */,
 				AE7A01151C9675A60058045F /* LaunchScreen.storyboard */,
@@ -398,6 +403,7 @@
 				AE7A01461C96AFBD0058045F /* MainViewController.m in Sources */,
 				AE7A01421C96AF200058045F /* MKWebView.m in Sources */,
 				AE7A014D1C96B00F0058045F /* CreditCardViewController.m in Sources */,
+				AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

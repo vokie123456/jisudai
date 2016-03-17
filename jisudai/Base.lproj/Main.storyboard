@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="-800" y="-469"/>
         </scene>
-        <!--Item-->
+        <!--信用卡-->
         <scene sceneID="i3K-qB-ZmQ">
             <objects>
                 <navigationController id="eDJ-vo-eOG" customClass="ZYNavigationViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gq4-Jv-stl"/>
+                    <tabBarItem key="tabBarItem" title="信用卡" id="gq4-Jv-stl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Csb-Ou-hAA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -62,11 +62,11 @@
             </objects>
             <point key="canvasLocation" x="-792" y="256"/>
         </scene>
-        <!--Item-->
+        <!--资讯-->
         <scene sceneID="qbq-AI-fxB">
             <objects>
                 <navigationController id="Pge-Yg-AfX" customClass="ZYNavigationViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8TF-aJ-ggK"/>
+                    <tabBarItem key="tabBarItem" title="资讯" id="8TF-aJ-ggK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2J5-jI-D5P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="-1258" y="966"/>
         </scene>
-        <!--我的-->
+        <!--资讯-->
         <scene sceneID="99v-aa-WIm">
             <objects>
-                <viewController id="ip6-Og-68V" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreditMessageViewController" id="ip6-Og-68V" customClass="CreditMessageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jvh-ar-iVu"/>
                         <viewControllerLayoutGuide type="bottom" id="cRk-dh-AWG"/>
@@ -92,18 +92,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="我的" id="6h2-lV-3AB"/>
+                    <tabBarItem key="tabBarItem" title="资讯" id="6h2-lV-3AB"/>
                     <navigationItem key="navigationItem" id="q4h-eB-HEh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cy0-U2-Qjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-797" y="952"/>
         </scene>
-        <!--Item-->
+        <!--首页-->
         <scene sceneID="xkb-fn-MJj">
             <objects>
                 <navigationController id="7CB-LV-TvN" customClass="ZYNavigationViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Zd9-0c-ffG"/>
+                    <tabBarItem key="tabBarItem" title="首页" id="Zd9-0c-ffG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PKk-Vy-BN3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -156,11 +156,11 @@
             </objects>
             <point key="canvasLocation" x="-2056" y="-607"/>
         </scene>
-        <!--Item-->
+        <!--贷款-->
         <scene sceneID="yja-JW-mJg">
             <objects>
                 <navigationController id="3Ia-LZ-Utx" customClass="ZYNavigationViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xHC-cP-qnM"/>
+                    <tabBarItem key="tabBarItem" title="贷款" id="xHC-cP-qnM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A5X-t3-Rvv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

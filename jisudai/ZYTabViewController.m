@@ -18,25 +18,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UITabBarItem *hotItem    = [self.tabBar.items objectAtIndex:0];
-    UITabBarItem *allItem    = [self.tabBar.items objectAtIndex:1];
-    UITabBarItem *personItem = [self.tabBar.items objectAtIndex:2];
-    
+    UITabBarItem *home    = [self.tabBar.items objectAtIndex:0];
+    UITabBarItem *loan = [self.tabBar.items objectAtIndex:1];
+    UITabBarItem *creditCard = [self.tabBar.items objectAtIndex:2];
+    UITabBarItem *creditMessage = [self.tabBar.items objectAtIndex:3];
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0f)  {
         self.tabBar.translucent = NO;
         [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:10],NSFontAttributeName, nil] forState:UIControlStateNormal];
 //
-        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithHexColorString:@"00aaee"],NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:27.f/255.f green:200.f/255.f blue:217.f/255.f alpha:1.0],NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
         [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithHexColorString:@"808080"],NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
         
-        hotItem.image = [[UIImage imageNamed:@"homel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        hotItem.selectedImage = [[UIImage imageNamed:@"homeh"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        home.image = [[UIImage imageNamed:@"home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        home.selectedImage = [[UIImage imageNamed:@"home_s"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
-        allItem.image = [[UIImage imageNamed:@"cardl"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        allItem.selectedImage = [[UIImage imageNamed:@"cardh"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        loan.image = [[UIImage imageNamed:@"daikuan"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        loan.selectedImage = [[UIImage imageNamed:@"daikuan_s"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
-        personItem.image = [[UIImage imageNamed:@"myl"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        personItem.selectedImage = [[UIImage imageNamed:@"myh"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        creditCard.image = [[UIImage imageNamed:@"credit"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        creditCard.selectedImage = [[UIImage imageNamed:@"credit_s"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+        creditMessage.image = [[UIImage imageNamed:@"zixun"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        creditMessage.selectedImage = [[UIImage imageNamed:@"zixun_s"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
     }
     // Do any additional setup after loading the view.
