@@ -11,7 +11,8 @@
 #import "JCCBaseWebViewController.h"
 
 @interface MainViewController ()<MKWebViewDelegate>
-
+@property (nonatomic, strong) MKWebView *webView;
+@property (nonatomic, assign) BOOL loadFail;
 @end
 
 @implementation MainViewController
@@ -20,32 +21,53 @@
     [super viewDidLoad];
     //  那
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    MKWebView *webView = [[MKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 49) url:@"http://www.91jisudai.com" type:@"1"];
-    webView.delegate = self;
-    [self.view addSubview:webView];
+    _loadFail = NO;
+    _webView = [[MKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 49) url:@"http://www.91jisudai.com/Mobile/index" type:@"2"];
+    _webView.delegate = self;
+    [self.view addSubview:_webView];
+
     // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+    if (_webView && _loadFail) {
+         [_webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.91jisudai.com/Mobile/index"]]];
+    }
 }
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)webLoadFail {
+    _loadFail = YES;
+}
 
 - (void)MKWebViewFinishContentHeight:(CGFloat)h {
-    
+    _loadFail = NO;
 }
 
 - (void)webLinkTouch:(NSString*)url {
     JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
     web.url = url;
+    web.isSelectedCity = self.webView.isSelectedCity;
     web.hidesBottomBarWhenPushed = YES;
+    __weak __typeof(self) weak = self;
+    web.webHome = ^(NSString*url) {
+        __strong __typeof(self) strongSelf = weak;
+        strongSelf.webView.isSelectedCity = NO;
+        [strongSelf.webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+         strongSelf.tabBarController.selectedIndex = 0;
+    };
     [self.navigationController pushViewController:web animated:YES];
 }
 

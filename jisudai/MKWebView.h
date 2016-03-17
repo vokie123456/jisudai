@@ -11,9 +11,12 @@
 @protocol MKWebViewDelegate <NSObject>
 @optional
 - (void)MKWebViewFinishContentHeight:(CGFloat)h;
+- (void)webLoadFail;
 - (void)webLinkTouch:(NSString*)url;
 - (void)webBack;
-- (void)webHome;
+- (void)webHome:(NSString*)url;
+- (void)webCredit:(NSString*)url;
+
 @end
 
 @interface MKWebView : UIView <UIWebViewDelegate>
@@ -21,6 +24,7 @@
 @property(nonatomic,weak)id <MKWebViewDelegate> delegate;
 @property(nonatomic,assign)BOOL scroll;
 @property(nonatomic,strong)NSString *url;
+@property (nonatomic, assign) BOOL isSelectedCity;
 
 - (id)initWithFrame:(CGRect)frame url:(NSString*)html type:(NSString *)type;
 

@@ -10,7 +10,7 @@
 #import "MKWebView.h"
 
 @interface JCCBaseWebViewController ()<MKWebViewDelegate>
-
+@property (nonatomic, strong) MKWebView *webView;
 @end
 
 @implementation JCCBaseWebViewController
@@ -21,9 +21,10 @@
 //  那
     self.view.backgroundColor = [UIColor whiteColor];
     
-    MKWebView *webView = [[MKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 5) url:_url type:@""];
-    webView.delegate = self;
-    [self.view addSubview:webView];
+    _webView = [[MKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 5) url:_url type:@""];
+    _webView.isSelectedCity = self.isSelectedCity;
+    _webView.delegate = self;
+    [self.view addSubview:_webView];
     
     // Do any additional setup after loading the view.
 }
@@ -36,7 +37,19 @@
 - (void)webLinkTouch:(NSString *)url {
     JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
     web.url = url;
+    web.isSelectedCity = self.webView.isSelectedCity;
     web.hidesBottomBarWhenPushed = YES;
+    __weak __typeof(self) weak = self;
+    web.webHome = ^(NSString*url) {
+        __strong __typeof(self) strongSelf = weak;
+        strongSelf.webView.isSelectedCity = NO;
+        [strongSelf.webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+    };
+    web.webCredit = ^(NSString*url) {
+        __strong __typeof(self) strongSelf = weak;
+        strongSelf.webView.isSelectedCity = NO;
+        [strongSelf.webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+    };
     [self.navigationController pushViewController:web animated:YES];
 }
 
@@ -44,8 +57,22 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)webHome {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+- (void)webHome:(NSString *)url {
+    if (self.webHome) {
+        self.webHome(url);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)webCredit:(NSString *)url {
+    if (self.webCredit) {
+        self.webCredit(url);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)webLoadFail {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

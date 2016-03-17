@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MKWebView.h"
+
 //#import "JCCBaseViewController.h"
+typedef void (^BlockWebHome)(NSString*);
+typedef void (^BlockWebCredit)(NSString*);
 
 @interface JCCBaseWebViewController : UIViewController
 @property (nonatomic,strong)NSString *url;
 @property (nonatomic,strong)NSString *webTitle;
 @property (nonatomic,assign)BOOL showShare;//是否需要分享
+@property (nonatomic, copy) BlockWebHome webHome;
+@property (nonatomic, copy) BlockWebCredit webCredit;
+@property (nonatomic, assign) BOOL isSelectedCity;
 
 @end

@@ -7,9 +7,15 @@
 //
 
 #import "MKWebView.h"
+#import "UIColor+Extend.h"
 
 #define KTagActivitity 6666
+@interface MKWebView ()
+@property (nonatomic, strong) UIButton *back;
+@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, strong) UIView *mast;
 
+@end
 
 @implementation MKWebView
 @synthesize webView = _webView;
@@ -27,19 +33,48 @@
         _webView.scalesPageToFit = YES;
         [self addSubview:_webView];
         
-        if ([type integerValue] == 1) {
-            UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
-            back.frame = CGRectMake(0, 0, 100, 44);
-            back.backgroundColor = [UIColor clearColor];
-            [_webView.scrollView addSubview:back];
-        }else {
-            UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
-            back.frame = CGRectMake(0, 0, 80, 44);
-            [back addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-            [_webView.scrollView addSubview:back];
+         _type = [type integerValue];
+        
+        
+        if ([html hasPrefix:@"http://interface.api.haodai.com/"]) {
+            UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
+            nav.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
+            [_webView.scrollView addSubview:nav];
+            nav.text = @"贷款";
+            nav.textAlignment = NSTextAlignmentCenter;
+            nav.textColor = [UIColor whiteColor];
+            nav.font = [UIFont systemFontOfSize:18];
+            //            _webView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - 44);
         }
         
        
+        if (_type == 2) {
+            
+        }else if (_type == 1) {
+            _back = [UIButton buttonWithType:UIButtonTypeCustom];
+            _back.frame = CGRectMake(0, 0, 100, 44);
+            _back.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
+            _back.hidden = YES;
+            [_webView.scrollView addSubview:_back];
+        }else {
+            _back = [UIButton buttonWithType:UIButtonTypeCustom];
+            _back.frame = CGRectMake(0, 0, 44, 44);
+            [_back setImage:[UIImage imageNamed:@"back1"] forState:0];
+            _back.layer.masksToBounds = YES;
+            _back.layer.cornerRadius = 5;
+            _back.hidden = YES;
+            [_back addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+            [_webView.scrollView addSubview:_back];
+        }
+        
+        
+        if (![html hasPrefix:@"http://www.91jisudai.com/Mobile/index"] && ![html hasPrefix:@"http://www.91jisudai.com/Mobile/creditcard"]) {
+            _mast = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width - 80, 0, 80, 44)];
+            _mast.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
+            _mast.hidden = YES;
+             [_webView.scrollView addSubview:_mast];
+        }
+        
         
         //这里传来的数据有可能是网址
         if ([type isEqualToString:@"string"]) {
@@ -54,6 +89,7 @@
     }
     return self;
 }
+
 
 - (void)setScroll:(BOOL)scroll {
     _scroll = scroll;
@@ -73,8 +109,8 @@
 #pragma mark - UIWebViewDelegate
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [[webView viewWithTag:KTagActivitity] removeFromSuperview];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"加载失败请检查您的网络连接" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alertView show];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"网络连接失败" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
@@ -87,13 +123,19 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSString *height_str= [webView stringByEvaluatingJavaScriptFromString: @"document.body.scrollHeight"];
-    CGFloat height = [height_str floatValue];
-
-    NSLog(@"height: %@//%f", [webView stringByEvaluatingJavaScriptFromString: @"document.body.scrollHeight"],webView.scrollView.contentSize.height);
-    if ([self.delegate respondsToSelector:@selector(MKWebViewFinishContentHeight:)]) {
-        [self.delegate MKWebViewFinishContentHeight:height];
-    }
+    _back.hidden = NO;
+    _mast.hidden = NO;
+    [webView stringByEvaluatingJavaScriptFromString:@"document.body.style.webkitTouchCallout='none';"];
+    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
+    // Disable callout
+    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
+//    NSString *height_str= [webView stringByEvaluatingJavaScriptFromString: @"document.body.scrollHeight"];
+//    CGFloat height = [height_str floatValue];
+//
+//    NSLog(@"height: %@//%f", [webView stringByEvaluatingJavaScriptFromString: @"document.body.scrollHeight"],webView.scrollView.contentSize.height);
+//    if ([self.delegate respondsToSelector:@selector(MKWebViewFinishContentHeight:)]) {
+//        [self.delegate MKWebViewFinishContentHeight:height];
+//    }
     [[webView viewWithTag:KTagActivitity] removeFromSuperview];
 }
 
@@ -103,15 +145,25 @@
     NSLog(@"--%@--scheme:%@",[[requestURL relativeString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding],[requestURL scheme]);
     if (([[requestURL scheme] isEqualToString:@"http"] || [[requestURL scheme] isEqualToString:@"https"] || [[requestURL scheme] isEqualToString: @"mailto" ])
         && (navigationType == UIWebViewNavigationTypeLinkClicked)) {
-       
-        if ([[requestURL absoluteString] hasPrefix:@"http://www.91jisudai.com/Mobile/index"]) {
-            if ([self.delegate respondsToSelector:@selector(webHome)]) {
-                [self.delegate webHome];
+        NSString *url = [requestURL absoluteString];
+        if ([url hasPrefix:@"http://www.91jisudai.com/Mobile/fastapply/"]) {
+            url = @"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0";
+        }
+        if (_isSelectedCity) {
+            if ([url hasPrefix:@"http://www.91jisudai.com/Mobile/index"] && [self.delegate  respondsToSelector:@selector(webHome:)]) {
+                [self.delegate webHome:url];
+                [self isSelectedCity:url];
+                return NO;
+            }else if([url hasPrefix:@"http://www.91jisudai.com/Mobile/creditcard"] && [self.delegate  respondsToSelector:@selector(webCredit:)]) {
+                [self.delegate webCredit:url];
+                [self isSelectedCity:url];
+                return NO;
             }
-            return NO;
         }else {
-            if ([self.delegate respondsToSelector:@selector(webLinkTouch:)]) {
-                [self.delegate webLinkTouch:requestURL.absoluteString];
+            [self isSelectedCity:url];
+            if ([self.delegate respondsToSelector:@selector(webLinkTouch:)])
+            {
+                [self.delegate webLinkTouch:url];
                 return NO;
             }
         }
@@ -120,20 +172,34 @@
     return YES;
 }
 
-- (void)back {
+- (void)isSelectedCity:(NSString*)requestURL {
+    if ([requestURL hasPrefix:@"http://www.91jisudai.com/Mobile/changecity/"]) {
+        _isSelectedCity = YES;
+    }else {
+        _isSelectedCity = NO;
+    }
+}
+
+- (void)back:(id)sender {
     if ([self.delegate respondsToSelector:@selector(webBack)]) {
         [self.delegate webBack];
     }
 }
 
 - (void)dealloc {
-    _webView.delegate = nil;
+     _webView.delegate = nil;
     [_webView loadHTMLString:@"" baseURL:nil];
     [_webView stopLoading];
     [_webView removeFromSuperview];
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex NS_DEPRECATED_IOS(2_0, 9_0) {
+    if([self.delegate respondsToSelector:@selector(webLoadFail)]) {
+        [self.delegate webLoadFail];
+    }
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
