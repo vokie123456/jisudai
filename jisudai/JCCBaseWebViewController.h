@@ -12,6 +12,7 @@
 //#import "JCCBaseViewController.h"
 typedef void (^BlockWebHome)(NSString*);
 typedef void (^BlockWebCredit)(NSString*);
+typedef void (^BlockBackHome)(void);
 
 @interface JCCBaseWebViewController : UIViewController
 @property (nonatomic,strong)NSString *url;
@@ -20,5 +21,6 @@ typedef void (^BlockWebCredit)(NSString*);
 @property (nonatomic, copy) BlockWebHome webHome;
 @property (nonatomic, copy) BlockWebCredit webCredit;
 @property (nonatomic, assign) BOOL isSelectedCity;
+@property (nonatomic, copy) BlockBackHome back;
 
 @end

@@ -50,10 +50,18 @@
         strongSelf.webView.isSelectedCity = NO;
         [strongSelf.webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     };
+    web.back = ^(){
+        __strong __typeof(self) strongSelf = weak;
+        strongSelf.webView.isSelectedCity = NO;
+    };
     [self.navigationController pushViewController:web animated:YES];
 }
 
 - (void)webBack {
+    _isSelectedCity = NO;
+    if (self.back) {
+        self.back();
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 

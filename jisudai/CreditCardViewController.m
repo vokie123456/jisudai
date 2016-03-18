@@ -64,6 +64,10 @@
         [strongSelf.webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
         strongSelf.tabBarController.selectedIndex = 2;
     };
+    web.back = ^ () {
+        __strong __typeof(self) strongSelf = weak;
+        strongSelf.webView.isSelectedCity = NO;
+    };
     [self.navigationController pushViewController:web animated:YES];
 }
 

@@ -8,6 +8,7 @@
 
 #import "MKWebView.h"
 #import "UIColor+Extend.h"
+#import "KLReachabilityManager.h"
 
 #define KTagActivitity 6666
 @interface MKWebView ()
@@ -109,8 +110,9 @@
 #pragma mark - UIWebViewDelegate
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [[webView viewWithTag:KTagActivitity] removeFromSuperview];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"网络连接失败" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
-    [alert show];
+    if ([self.delegate respondsToSelector:@selector(webLoadFail)]) {
+        [self.delegate webLoadFail];
+    }
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
@@ -145,6 +147,14 @@
     NSLog(@"--%@--scheme:%@",[[requestURL relativeString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding],[requestURL scheme]);
     if (([[requestURL scheme] isEqualToString:@"http"] || [[requestURL scheme] isEqualToString:@"https"] || [[requestURL scheme] isEqualToString: @"mailto" ])
         && (navigationType == UIWebViewNavigationTypeLinkClicked)) {
+        
+        KLReachabilityStatus stat = [KLReachabilityManager netWorkReachable];
+        if (stat == KLReachabilityStatusUnknown || stat == KLReachabilityStatusNotReachable) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您的网络不好" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+            return NO;
+        }
+
         NSString *url = [requestURL absoluteString];
         if ([url hasPrefix:@"http://www.91jisudai.com/Mobile/fastapply/"]) {
             url = @"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0";

@@ -24,6 +24,7 @@
 		AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01521C96C4D30058045F /* ZYTabViewController.m */; };
 		AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01551C96C4EF0058045F /* UIColor+Extend.m */; };
 		AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01831C9A487A0058045F /* CreditMessageViewController.m */; };
+		AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		AE7A01551C96C4EF0058045F /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
 		AE7A01821C9A487A0058045F /* CreditMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditMessageViewController.h; sourceTree = "<group>"; };
 		AE7A01831C9A487A0058045F /* CreditMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditMessageViewController.m; sourceTree = "<group>"; };
+		AE7A01911C9B9EFA0058045F /* KLReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLReachabilityManager.h; sourceTree = "<group>"; };
+		AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLReachabilityManager.m; sourceTree = "<group>"; };
 		DDFF7A3F2BF16D036C8E217C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E239A8D02EA74D23DAC96E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +122,8 @@
 		AE7A00FB1C9675A60058045F = {
 			isa = PBXGroup;
 			children = (
+				AE7A01911C9B9EFA0058045F /* KLReachabilityManager.h */,
+				AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */,
 				AE7A01061C9675A60058045F /* jisudai */,
 				AE7A01201C9675A60058045F /* jisudaiTests */,
 				AE7A012B1C9675A60058045F /* jisudaiUITests */,
@@ -398,6 +403,7 @@
 				AE7A013F1C96AF110058045F /* JCCBaseWebViewController.m in Sources */,
 				AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */,
 				AE7A01091C9675A60058045F /* main.m in Sources */,
+				AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */,
 				AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */,
 				AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */,
 				AE7A01461C96AFBD0058045F /* MainViewController.m in Sources */,
@@ -544,12 +550,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yong Zhou (HL22QJ5VRG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = jisudai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -560,13 +567,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yong Zhou (HL22QJ5VRG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yong Zhou (HL22QJ5VRG)";
 				INFOPLIST_FILE = jisudai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
