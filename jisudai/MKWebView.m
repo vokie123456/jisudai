@@ -36,6 +36,31 @@
         
          _type = [type integerValue];
         
+        if (![html hasPrefix:@"http://www.91jisudai.com/Mobile/index"] && ![html hasPrefix:@"http://www.91jisudai.com/Mobile/creditcard"]) {
+            if ([html hasPrefix:@"http://www.91jisudai.com/Mobile/creditredirect"]) {
+                if ([html rangeOfString:@"bank_id/15"].length || [html rangeOfString:@"bank_id/1"].length ||[html rangeOfString:@"bank_id/43"].length) {
+                    UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
+                    nav.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
+                    nav.textAlignment = NSTextAlignmentCenter;
+                    nav.textColor = [UIColor whiteColor];
+                    nav.font = [UIFont systemFontOfSize:18];
+                    [_webView.scrollView addSubview:nav];
+                    if ([html rangeOfString:@"bank_id/15"].length ) {
+                        nav.text = @"平安银行";
+                        nav.frame = CGRectMake(0, 0, self.frame.size.width, 54);
+                    }else if ([html rangeOfString:@"bank_id/1"].length) {
+                        nav.text = @"招商银行";
+                    }else if([html rangeOfString:@"bank_id/43"].length) {
+                        nav.text = @"浦发银行";
+                    }
+                }
+            }
+            _mast = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width - 80, 0, 80, 44)];
+            _mast.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
+            _mast.hidden = YES;
+            [_webView.scrollView addSubview:_mast];
+        }
+
         
         if ([html hasPrefix:@"http://interface.api.haodai.com/"]) {
             UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
@@ -45,8 +70,9 @@
             nav.textAlignment = NSTextAlignmentCenter;
             nav.textColor = [UIColor whiteColor];
             nav.font = [UIFont systemFontOfSize:18];
-            //            _webView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - 44);
+            //_webView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - 44);
         }
+        
         
        
         if (_type == 2) {
@@ -66,14 +92,6 @@
             _back.hidden = YES;
             [_back addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
             [_webView.scrollView addSubview:_back];
-        }
-        
-        
-        if (![html hasPrefix:@"http://www.91jisudai.com/Mobile/index"] && ![html hasPrefix:@"http://www.91jisudai.com/Mobile/creditcard"]) {
-            _mast = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width - 80, 0, 80, 44)];
-            _mast.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
-            _mast.hidden = YES;
-             [_webView.scrollView addSubview:_mast];
         }
         
         
