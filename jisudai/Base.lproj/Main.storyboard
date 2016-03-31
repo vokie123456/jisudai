@@ -62,11 +62,11 @@
             </objects>
             <point key="canvasLocation" x="-792" y="256"/>
         </scene>
-        <!--资讯-->
+        <!--我的-->
         <scene sceneID="qbq-AI-fxB">
             <objects>
                 <navigationController id="Pge-Yg-AfX" customClass="ZYNavigationViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="资讯" id="8TF-aJ-ggK"/>
+                    <tabBarItem key="tabBarItem" title="我的" id="8TF-aJ-ggK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2J5-jI-D5P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="-1258" y="966"/>
         </scene>
-        <!--资讯-->
+        <!--我的-->
         <scene sceneID="99v-aa-WIm">
             <objects>
-                <viewController storyboardIdentifier="CreditMessageViewController" id="ip6-Og-68V" customClass="CreditMessageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserViewController" id="ip6-Og-68V" customClass="UserViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jvh-ar-iVu"/>
                         <viewControllerLayoutGuide type="bottom" id="cRk-dh-AWG"/>
@@ -90,10 +90,39 @@
                     <view key="view" contentMode="scaleToFill" id="Hxf-nM-rnh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FQp-Gj-ei5">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7RD-gE-vJK">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7RD-gE-vJK" id="xp3-30-dYs">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ip6-Og-68V" id="2qb-vD-kry"/>
+                                    <outlet property="delegate" destination="ip6-Og-68V" id="Tp0-MB-14I"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FQp-Gj-ei5" firstAttribute="leading" secondItem="Hxf-nM-rnh" secondAttribute="leading" id="5MR-L0-Kw8"/>
+                            <constraint firstAttribute="trailing" secondItem="FQp-Gj-ei5" secondAttribute="trailing" id="Ms2-CM-R1f"/>
+                            <constraint firstItem="cRk-dh-AWG" firstAttribute="top" secondItem="FQp-Gj-ei5" secondAttribute="bottom" id="SFM-sw-pNI"/>
+                            <constraint firstItem="FQp-Gj-ei5" firstAttribute="top" secondItem="jvh-ar-iVu" secondAttribute="bottom" id="cAF-cr-6yT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="资讯" id="6h2-lV-3AB"/>
-                    <navigationItem key="navigationItem" id="q4h-eB-HEh"/>
+                    <navigationItem key="navigationItem" title="我的" id="q4h-eB-HEh"/>
+                    <connections>
+                        <outlet property="tableView" destination="FQp-Gj-ei5" id="f2A-hU-t2q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cy0-U2-Qjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

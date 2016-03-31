@@ -25,6 +25,7 @@
 		AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01551C96C4EF0058045F /* UIColor+Extend.m */; };
 		AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01831C9A487A0058045F /* CreditMessageViewController.m */; };
 		AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */; };
+		AE7CFB4F1CACCF36003EC1CF /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		AE7A01831C9A487A0058045F /* CreditMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditMessageViewController.m; sourceTree = "<group>"; };
 		AE7A01911C9B9EFA0058045F /* KLReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLReachabilityManager.h; sourceTree = "<group>"; };
 		AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLReachabilityManager.m; sourceTree = "<group>"; };
+		AE7CFB4D1CACCF36003EC1CF /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		DDFF7A3F2BF16D036C8E217C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E239A8D02EA74D23DAC96E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,19 +149,13 @@
 		AE7A01061C9675A60058045F /* jisudai */ = {
 			isa = PBXGroup;
 			children = (
-				AE7A01431C96AFA00058045F /* Common */,
 				AE7A010A1C9675A60058045F /* AppDelegate.h */,
 				AE7A010B1C9675A60058045F /* AppDelegate.m */,
-				AE7A01441C96AFBD0058045F /* MainViewController.h */,
-				AE7A01451C96AFBD0058045F /* MainViewController.m */,
-				AE7A01481C96B0000058045F /* DaikuanViewController.h */,
-				AE7A01491C96B0000058045F /* DaikuanViewController.m */,
-				AE7A014B1C96B00F0058045F /* CreditCardViewController.h */,
-				AE7A014C1C96B00F0058045F /* CreditCardViewController.m */,
-				AE7A01821C9A487A0058045F /* CreditMessageViewController.h */,
-				AE7A01831C9A487A0058045F /* CreditMessageViewController.m */,
 				AE7A01101C9675A60058045F /* Main.storyboard */,
 				AE7A01131C9675A60058045F /* Assets.xcassets */,
+				AE7A01431C96AFA00058045F /* Common */,
+				AE7CFB4A1CACCEA4003EC1CF /* UIKit */,
+				AE7CFB4C1CACCED8003EC1CF /* Utils */,
 				AE7A01151C9675A60058045F /* LaunchScreen.storyboard */,
 				AE7A01181C9675A60058045F /* Info.plist */,
 				AE7A01071C9675A60058045F /* Supporting Files */,
@@ -195,8 +192,6 @@
 		AE7A01431C96AFA00058045F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				AE7A01541C96C4EF0058045F /* UIColor+Extend.h */,
-				AE7A01551C96C4EF0058045F /* UIColor+Extend.m */,
 				AE7A01511C96C4D30058045F /* ZYTabViewController.h */,
 				AE7A01521C96C4D30058045F /* ZYTabViewController.m */,
 				AE7A014E1C96BEB60058045F /* ZYNavigationViewController.h */,
@@ -207,6 +202,32 @@
 				AE7A01411C96AF200058045F /* MKWebView.m */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		AE7CFB4A1CACCEA4003EC1CF /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				AE7A01441C96AFBD0058045F /* MainViewController.h */,
+				AE7A01451C96AFBD0058045F /* MainViewController.m */,
+				AE7A01481C96B0000058045F /* DaikuanViewController.h */,
+				AE7A01491C96B0000058045F /* DaikuanViewController.m */,
+				AE7A014B1C96B00F0058045F /* CreditCardViewController.h */,
+				AE7A014C1C96B00F0058045F /* CreditCardViewController.m */,
+				AE7A01821C9A487A0058045F /* CreditMessageViewController.h */,
+				AE7A01831C9A487A0058045F /* CreditMessageViewController.m */,
+				AE7CFB4D1CACCF36003EC1CF /* UserViewController.h */,
+				AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		AE7CFB4C1CACCED8003EC1CF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AE7A01541C96C4EF0058045F /* UIColor+Extend.h */,
+				AE7A01551C96C4EF0058045F /* UIColor+Extend.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		FC78667ADE3516AE725D53FC /* Frameworks */ = {
@@ -409,6 +430,7 @@
 				AE7A01461C96AFBD0058045F /* MainViewController.m in Sources */,
 				AE7A01421C96AF200058045F /* MKWebView.m in Sources */,
 				AE7A014D1C96B00F0058045F /* CreditCardViewController.m in Sources */,
+				AE7CFB4F1CACCF36003EC1CF /* UserViewController.m in Sources */,
 				AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,13 +572,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = jisudai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e8f252a3-00f0-4d10-b866-278cc7c65e8d";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -567,14 +589,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = jisudai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e8f252a3-00f0-4d10-b866-278cc7c65e8d";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

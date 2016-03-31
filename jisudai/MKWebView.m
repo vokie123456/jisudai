@@ -38,7 +38,7 @@
         
         if (![html hasPrefix:@"http://www.91jisudai.com/Mobile/index"] && ![html hasPrefix:@"http://www.91jisudai.com/Mobile/creditcard"]) {
             if ([html hasPrefix:@"http://www.91jisudai.com/Mobile/creditredirect"]) {
-                if ([html rangeOfString:@"bank_id/15"].length || [html rangeOfString:@"bank_id/1"].length ||[html rangeOfString:@"bank_id/43"].length) {
+                if ([html rangeOfString:@"bank_id/15"].length || [html rangeOfString:@"bank_id/1"].length ||[html rangeOfString:@"bank_id/43"].length || [html rangeOfString:@"bank_id/8"].length) {
                     UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
                     nav.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
                     nav.textAlignment = NSTextAlignmentCenter;
@@ -51,6 +51,8 @@
                     }else if ([html rangeOfString:@"bank_id/1"].length) {
                         nav.text = @"招商银行";
                     }else if([html rangeOfString:@"bank_id/43"].length) {
+                        nav.text = @"花旗银行";
+                    }else if ([html rangeOfString:@"bank_id/8"].length) {
                         nav.text = @"浦发银行";
                     }
                 }
