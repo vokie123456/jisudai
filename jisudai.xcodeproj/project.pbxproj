@@ -26,6 +26,12 @@
 		AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01831C9A487A0058045F /* CreditMessageViewController.m */; };
 		AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */; };
 		AE7CFB4F1CACCF36003EC1CF /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */; };
+		AEE8BEF11CAE56B000064618 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */; };
+		AEE8BEF41CAE570C00064618 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF31CAE570C00064618 /* UITextView+Placeholder.m */; };
+		AEE8BEF71CAE571B00064618 /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF61CAE571B00064618 /* ZYTextField.m */; };
+		AEE8BEFC1CAE5B6000064618 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEFB1CAE5B6000064618 /* UIViewExt.m */; };
+		AEE8BEFE1CAE615500064618 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE8BEFD1CAE615500064618 /* logo.png */; };
+		AEE8BF021CAE61CD00064618 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BF011CAE61CD00064618 /* AboutUsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +89,18 @@
 		AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLReachabilityManager.m; sourceTree = "<group>"; };
 		AE7CFB4D1CACCF36003EC1CF /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		AEE8BEEF1CAE56B000064618 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
+		AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
+		AEE8BEF21CAE570C00064618 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		AEE8BEF31CAE570C00064618 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		AEE8BEF51CAE571B00064618 /* ZYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTextField.h; sourceTree = "<group>"; };
+		AEE8BEF61CAE571B00064618 /* ZYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTextField.m; sourceTree = "<group>"; };
+		AEE8BEF91CAE574B00064618 /* JCCDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCDefine.h; sourceTree = "<group>"; };
+		AEE8BEFA1CAE5B6000064618 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		AEE8BEFB1CAE5B6000064618 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		AEE8BEFD1CAE615500064618 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		AEE8BF001CAE61CD00064618 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		AEE8BF011CAE61CD00064618 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		DDFF7A3F2BF16D036C8E217C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E239A8D02EA74D23DAC96E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +167,7 @@
 		AE7A01061C9675A60058045F /* jisudai */ = {
 			isa = PBXGroup;
 			children = (
+				AEE8BEFD1CAE615500064618 /* logo.png */,
 				AE7A010A1C9675A60058045F /* AppDelegate.h */,
 				AE7A010B1C9675A60058045F /* AppDelegate.m */,
 				AE7A01101C9675A60058045F /* Main.storyboard */,
@@ -192,6 +211,8 @@
 		AE7A01431C96AFA00058045F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AEE8BEF51CAE571B00064618 /* ZYTextField.h */,
+				AEE8BEF61CAE571B00064618 /* ZYTextField.m */,
 				AE7A01511C96C4D30058045F /* ZYTabViewController.h */,
 				AE7A01521C96C4D30058045F /* ZYTabViewController.m */,
 				AE7A014E1C96BEB60058045F /* ZYNavigationViewController.h */,
@@ -217,6 +238,10 @@
 				AE7A01831C9A487A0058045F /* CreditMessageViewController.m */,
 				AE7CFB4D1CACCF36003EC1CF /* UserViewController.h */,
 				AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */,
+				AEE8BEEF1CAE56B000064618 /* FeedBackViewController.h */,
+				AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */,
+				AEE8BF001CAE61CD00064618 /* AboutUsViewController.h */,
+				AEE8BF011CAE61CD00064618 /* AboutUsViewController.m */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -224,8 +249,13 @@
 		AE7CFB4C1CACCED8003EC1CF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AEE8BEF91CAE574B00064618 /* JCCDefine.h */,
+				AEE8BEF21CAE570C00064618 /* UITextView+Placeholder.h */,
+				AEE8BEF31CAE570C00064618 /* UITextView+Placeholder.m */,
 				AE7A01541C96C4EF0058045F /* UIColor+Extend.h */,
 				AE7A01551C96C4EF0058045F /* UIColor+Extend.m */,
+				AEE8BEFA1CAE5B6000064618 /* UIViewExt.h */,
+				AEE8BEFB1CAE5B6000064618 /* UIViewExt.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -308,6 +338,7 @@
 				TargetAttributes = {
 					AE7A01031C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = X92C369FEQ;
 					};
 					AE7A011C1C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
@@ -346,6 +377,7 @@
 			files = (
 				AE7A01171C9675A60058045F /* LaunchScreen.storyboard in Resources */,
 				AE7A01141C9675A60058045F /* Assets.xcassets in Resources */,
+				AEE8BEFE1CAE615500064618 /* logo.png in Resources */,
 				AE7A01121C9675A60058045F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,15 +455,20 @@
 				AE7A01501C96BEB60058045F /* ZYNavigationViewController.m in Sources */,
 				AE7A013F1C96AF110058045F /* JCCBaseWebViewController.m in Sources */,
 				AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */,
+				AEE8BEF71CAE571B00064618 /* ZYTextField.m in Sources */,
 				AE7A01091C9675A60058045F /* main.m in Sources */,
 				AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */,
 				AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */,
+				AEE8BF021CAE61CD00064618 /* AboutUsViewController.m in Sources */,
+				AEE8BEF11CAE56B000064618 /* FeedBackViewController.m in Sources */,
 				AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */,
 				AE7A01461C96AFBD0058045F /* MainViewController.m in Sources */,
 				AE7A01421C96AF200058045F /* MKWebView.m in Sources */,
 				AE7A014D1C96B00F0058045F /* CreditCardViewController.m in Sources */,
 				AE7CFB4F1CACCF36003EC1CF /* UserViewController.m in Sources */,
+				AEE8BEF41CAE570C00064618 /* UITextView+Placeholder.m in Sources */,
 				AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */,
+				AEE8BEFC1CAE5B6000064618 /* UIViewExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,13 +609,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
 				INFOPLIST_FILE = jisudai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e8f252a3-00f0-4d10-b866-278cc7c65e8d";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -589,14 +626,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
 				INFOPLIST_FILE = jisudai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e8f252a3-00f0-4d10-b866-278cc7c65e8d";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

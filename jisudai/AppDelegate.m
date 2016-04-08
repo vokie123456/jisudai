@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MobClick.h"
+#import <BmobSDK/Bmob.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [MobClick startWithAppkey:@"56e92d93e0f55aee7f000e98" reportPolicy:SEND_INTERVAL   channelId:@"AppStore"];
+    [Bmob registerWithAppKey:@"3f203200a048b7d693db5070ed1998f8"];
     return YES;
 }
 

@@ -1,1 +1,2 @@
 pod 'UMengAnalytics'
+pod 'BmobSDK'

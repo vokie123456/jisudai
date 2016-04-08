@@ -7,6 +7,7 @@
 //
 
 #import "ZYNavigationViewController.h"
+#import "UIColor+Extend.h"
 
 @interface ZYNavigationViewController ()
 
@@ -17,7 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationBar.barTintColor = [UIColor colorWithHexColorString:@"00d0df"];
     self.navigationBar.translucent = NO;
+    NSDictionary *attributes=[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,
+                              [UIFont fontWithName:@"TimesNewRomanPSMT" size:18], NSFontAttributeName, nil];
+    [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+    self.navigationBar.tintColor = [UIColor whiteColor];
   
     
     //移除黑线

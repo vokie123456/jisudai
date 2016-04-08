@@ -75,6 +75,20 @@
             //_webView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - 44);
         }
         
+        if (![html hasPrefix:@"http://www.91jisudai.com/"]) {
+            UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
+            nav.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
+            [_webView.scrollView addSubview:nav];
+            if ([html hasPrefix:@"http://www.kuaicha.info"]) {
+                nav.text = @"征信查询";
+            }else {
+                nav.text = @"申请信用卡";
+            }
+            nav.textAlignment = NSTextAlignmentCenter;
+            nav.textColor = [UIColor whiteColor];
+            nav.font = [UIFont systemFontOfSize:18];
+        }
+        
         
        
         if (_type == 2) {
@@ -95,6 +109,7 @@
             [_back addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
             [_webView.scrollView addSubview:_back];
         }
+        
         
         
         //这里传来的数据有可能是网址
@@ -125,6 +140,7 @@
     _url = url;
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
 }
+
 
 #pragma mark -
 #pragma mark - UIWebViewDelegate
