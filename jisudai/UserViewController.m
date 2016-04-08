@@ -10,14 +10,15 @@
 #import "JCCBaseWebViewController.h"
 #import "FeedBackViewController.h"
 #import "AboutUsViewController.h"
-
+#import "WXApi.h"
 #import "JCCDefine.h"
+#import "WXApiObject.h"
 
 #define Target_iOS7   ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0f) ? YES : NO
 #define mRateUrl      [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",@"1094308710"]
 #define mRateUrl_iOS7 [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@",@"1094308710"]
 
-@interface UserViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface UserViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *titles;
 @property (nonatomic, strong) NSArray *icons;
@@ -28,8 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titles = [NSArray arrayWithObjects:@"征信查询",@"意见反馈",@"评分",@"关于我们", nil];
-    self.icons = @[@"zhengxin",@"yijian",@"score",@"aboutUs"];
+    self.titles = [NSArray arrayWithObjects:@"征信查询",@"意见反馈",@"评分",@"关于我们",@"分享", nil];
+    self.icons = @[@"zhengxin",@"yijian",@"score",@"aboutUs",@"fenxiang"];
     // Do any additional setup after loading the view.
 }
 
@@ -79,6 +80,52 @@
         us.hidesBottomBarWhenPushed = YES;
         us.title = @"关于我们";
         [self.navigationController pushViewController:us animated:YES];
+    }else if(indexPath.row == 4) {
+        if ([WXApi isWXAppInstalled]) {
+            UIAlertView *alertView = [[UIAlertView alloc] init];
+            [alertView addButtonWithTitle:@"微信好友"];
+            [alertView addButtonWithTitle:@"朋友圈"];
+            [alertView addButtonWithTitle:@"取消"];
+             alertView.delegate = self;
+            [alertView show];
+        }
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        
+        WXWebpageObject *ext = [WXWebpageObject object];
+        ext.webpageUrl = @"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0";
+        
+        WXMediaMessage *message = [WXMediaMessage message];
+        message.title = @"极速贷款，在线预约信用卡营销员";
+        message.description = @"我找到一个可以快速申请贷款和信用卡的工具,赶快戳进来吧";
+        message.mediaObject = ext;
+        [message setThumbImage:[UIImage imageNamed:@"logo"]];
+        
+        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+        req.message = message;
+        req.scene = 0;
+        [WXApi sendReq:req];
+        
+    }else if(buttonIndex == 1) {
+    
+        WXWebpageObject *ext = [WXWebpageObject object];
+        ext.webpageUrl = @"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0";
+        
+        WXMediaMessage *message = [WXMediaMessage message];
+        message.title = @"极速贷款，在线预约信用卡营销员";
+        message.description = @"我找到一个可以快速申请贷款和信用卡的工具,赶快戳进来吧";
+        message.mediaObject = ext;
+        [message setThumbImage:[UIImage imageNamed:@"logo"]];
+        
+        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+        req.message = message;
+        req.scene = 1;
+        
+        [WXApi sendReq:req];
+
     }
 }
 

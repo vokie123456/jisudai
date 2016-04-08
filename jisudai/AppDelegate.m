@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "MobClick.h"
 #import <BmobSDK/Bmob.h>
+#import "WXApi.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -21,8 +22,19 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [MobClick startWithAppkey:@"56e92d93e0f55aee7f000e98" reportPolicy:SEND_INTERVAL   channelId:@"AppStore"];
-    [Bmob registerWithAppKey:@"3f203200a048b7d693db5070ed1998f8"];
+    [Bmob  registerWithAppKey:@"3f203200a048b7d693db5070ed1998f8"];
+    [WXApi registerApp:@"wx164fc6d2eb2ea1d6"];
+    
     return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:self];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

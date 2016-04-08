@@ -26,6 +26,15 @@
 		AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01831C9A487A0058045F /* CreditMessageViewController.m */; };
 		AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */; };
 		AE7CFB4F1CACCF36003EC1CF /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */; };
+		AEE825B11CB763E100690130 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825AC1CB763E100690130 /* libWeChatSDK.a */; };
+		AEE825B21CB763E100690130 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = AEE825AD1CB763E100690130 /* read_me.txt */; };
+		AEE825B51CB77F6600690130 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825B41CB77F6600690130 /* libz.tbd */; };
+		AEE825B71CB77F7500690130 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825B61CB77F7500690130 /* libsqlite3.0.tbd */; };
+		AEE825B91CB77F8C00690130 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825B81CB77F8C00690130 /* CoreTelephony.framework */; };
+		AEE825BB1CB77F9800690130 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825BA1CB77F9800690130 /* SystemConfiguration.framework */; };
+		AEE825BD1CB77FA200690130 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825BC1CB77FA200690130 /* UIKit.framework */; };
+		AEE825BF1CB77FAC00690130 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825BE1CB77FAC00690130 /* Foundation.framework */; };
+		AEE825C11CB7849E00690130 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825C01CB7849E00690130 /* libc++.tbd */; };
 		AEE8BEF11CAE56B000064618 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */; };
 		AEE8BEF41CAE570C00064618 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF31CAE570C00064618 /* UITextView+Placeholder.m */; };
 		AEE8BEF71CAE571B00064618 /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF61CAE571B00064618 /* ZYTextField.m */; };
@@ -89,6 +98,18 @@
 		AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLReachabilityManager.m; sourceTree = "<group>"; };
 		AE7CFB4D1CACCF36003EC1CF /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		AEE825AC1CB763E100690130 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		AEE825AD1CB763E100690130 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		AEE825AE1CB763E100690130 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		AEE825AF1CB763E100690130 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		AEE825B01CB763E100690130 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		AEE825B41CB77F6600690130 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		AEE825B61CB77F7500690130 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AEE825B81CB77F8C00690130 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		AEE825BA1CB77F9800690130 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AEE825BC1CB77FA200690130 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AEE825BE1CB77FAC00690130 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AEE825C01CB7849E00690130 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AEE8BEEF1CAE56B000064618 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
 		AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
 		AEE8BEF21CAE570C00064618 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
@@ -110,6 +131,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE825C11CB7849E00690130 /* libc++.tbd in Frameworks */,
+				AEE825BF1CB77FAC00690130 /* Foundation.framework in Frameworks */,
+				AEE825BD1CB77FA200690130 /* UIKit.framework in Frameworks */,
+				AEE825BB1CB77F9800690130 /* SystemConfiguration.framework in Frameworks */,
+				AEE825B91CB77F8C00690130 /* CoreTelephony.framework in Frameworks */,
+				AEE825B71CB77F7500690130 /* libsqlite3.0.tbd in Frameworks */,
+				AEE825B51CB77F6600690130 /* libz.tbd in Frameworks */,
+				AEE825B11CB763E100690130 /* libWeChatSDK.a in Frameworks */,
 				1F7FF2B772D5573A48E68B20 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +204,7 @@
 				AE7A01431C96AFA00058045F /* Common */,
 				AE7CFB4A1CACCEA4003EC1CF /* UIKit */,
 				AE7CFB4C1CACCED8003EC1CF /* Utils */,
+				AEE825B31CB763F600690130 /* ThreePublic */,
 				AE7A01151C9675A60058045F /* LaunchScreen.storyboard */,
 				AE7A01181C9675A60058045F /* Info.plist */,
 				AE7A01071C9675A60058045F /* Supporting Files */,
@@ -260,9 +290,37 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		AEE825AB1CB763E100690130 /* weixing */ = {
+			isa = PBXGroup;
+			children = (
+				AEE825AC1CB763E100690130 /* libWeChatSDK.a */,
+				AEE825AD1CB763E100690130 /* read_me.txt */,
+				AEE825AE1CB763E100690130 /* WechatAuthSDK.h */,
+				AEE825AF1CB763E100690130 /* WXApi.h */,
+				AEE825B01CB763E100690130 /* WXApiObject.h */,
+			);
+			name = weixing;
+			path = SDK1.6.2;
+			sourceTree = "<group>";
+		};
+		AEE825B31CB763F600690130 /* ThreePublic */ = {
+			isa = PBXGroup;
+			children = (
+				AEE825AB1CB763E100690130 /* weixing */,
+			);
+			name = ThreePublic;
+			sourceTree = "<group>";
+		};
 		FC78667ADE3516AE725D53FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEE825C01CB7849E00690130 /* libc++.tbd */,
+				AEE825BE1CB77FAC00690130 /* Foundation.framework */,
+				AEE825BC1CB77FA200690130 /* UIKit.framework */,
+				AEE825BA1CB77F9800690130 /* SystemConfiguration.framework */,
+				AEE825B81CB77F8C00690130 /* CoreTelephony.framework */,
+				AEE825B61CB77F7500690130 /* libsqlite3.0.tbd */,
+				AEE825B41CB77F6600690130 /* libz.tbd */,
 				DDFF7A3F2BF16D036C8E217C /* libPods.a */,
 			);
 			name = Frameworks;
@@ -338,7 +396,7 @@
 				TargetAttributes = {
 					AE7A01031C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = X92C369FEQ;
+						DevelopmentTeam = 3YR7CL6SMV;
 					};
 					AE7A011C1C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
@@ -379,6 +437,7 @@
 				AE7A01141C9675A60058045F /* Assets.xcassets in Resources */,
 				AEE8BEFE1CAE615500064618 /* logo.png in Resources */,
 				AE7A01121C9675A60058045F /* Main.storyboard in Resources */,
+				AEE825B21CB763E100690130 /* read_me.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,13 +668,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = jisudai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/jisudai/SDK1.6.2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e8f252a3-00f0-4d10-b866-278cc7c65e8d";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -626,14 +691,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = jisudai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/jisudai/SDK1.6.2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e8f252a3-00f0-4d10-b866-278cc7c65e8d";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
