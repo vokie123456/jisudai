@@ -29,8 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titles = [NSArray arrayWithObjects:@"征信查询",@"意见反馈",@"评分",@"关于我们",@"分享", nil];
-    self.icons = @[@"zhengxin",@"yijian",@"score",@"aboutUs",@"fenxiang"];
+    self.titles = [NSArray arrayWithObjects:@"征信查询",@"贷款计算器",@"分享",@"意见反馈",@"评分",@"关于我们", nil];
+    self.icons = @[@"zhengxin",@"jisuanqi",@"fenxiang",@"yijian",@"score",@"aboutUs"];
     // Do any additional setup after loading the view.
 }
 
@@ -47,48 +47,54 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = self.titles[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:[self.icons objectAtIndex:indexPath.row]];
+    ((UILabel*)[cell viewWithTag:101]).text = self.titles[indexPath.row];
+    ((UIImageView*)[cell viewWithTag:100]).image = [UIImage imageNamed:[self.icons objectAtIndex:indexPath.row]];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 64.f;
+    return 44.f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
         JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
-        web.hidesBottomBarWhenPushed = YES;
         web.url = @"http://www.kuaicha.info/creditCB.action?appKey=e7cba276ade84d51b325e83fb810dae8&appName=jisudai&loginType=IDCARD_PASSWORD&callBackURL=http://www.51daikuan.org/index.php/Api/Index/up_credit";
         web.hidesBottomBarWhenPushed = YES;
         web.webTitle = @"征信查询";
         [self.navigationController pushViewController:web animated:YES];
-    }else if (indexPath.row == 1) {
-        FeedBackViewController *feedback = StoryBoardDefined(@"FeedBackViewController");
-        feedback.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:feedback animated:YES];
-    }else if(indexPath.row == 2) {
-        NSURL *iTunesURL = [NSURL URLWithString:mRateUrl];
-        if (Target_iOS7) {
-            iTunesURL = [NSURL URLWithString:mRateUrl_iOS7];
-        }
-        [[UIApplication sharedApplication] openURL:iTunesURL];
-    }else if(indexPath.row == 3) {
-        AboutUsViewController *us = StoryBoardDefined(@"AboutUsViewController");
-        us.hidesBottomBarWhenPushed = YES;
-        us.title = @"关于我们";
-        [self.navigationController pushViewController:us animated:YES];
-    }else if(indexPath.row == 4) {
+    }else if(indexPath.row == 1) {
+        JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
+        web.url = @"http://91jisudai.com/Mobile/jsq/city/beijing.html";
+        web.hidesBottomBarWhenPushed = YES;
+        web.webTitle = @"贷款计算器";
+        [self.navigationController pushViewController:web animated:YES];
+    }else if (indexPath.row == 2) {
         if ([WXApi isWXAppInstalled]) {
             UIAlertView *alertView = [[UIAlertView alloc] init];
             [alertView addButtonWithTitle:@"微信好友"];
             [alertView addButtonWithTitle:@"朋友圈"];
             [alertView addButtonWithTitle:@"取消"];
-             alertView.delegate = self;
+            alertView.delegate = self;
             [alertView show];
         }
+    }else if(indexPath.row == 3) {
+        FeedBackViewController *feedback = StoryBoardDefined(@"FeedBackViewController");
+        feedback.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:feedback animated:YES];
+    }else if(indexPath.row == 4) {
+        NSURL *iTunesURL = [NSURL URLWithString:mRateUrl];
+        if (Target_iOS7) {
+            iTunesURL = [NSURL URLWithString:mRateUrl_iOS7];
+        }
+        [[UIApplication sharedApplication] openURL:iTunesURL];
+    }else if(indexPath.row == 5) {
+        AboutUsViewController *us = StoryBoardDefined(@"AboutUsViewController");
+        us.hidesBottomBarWhenPushed = YES;
+        us.title = @"关于我们";
+        [self.navigationController pushViewController:us animated:YES];
+
     }
 }
 

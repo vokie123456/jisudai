@@ -64,25 +64,19 @@
         }
 
         
-        if ([html hasPrefix:@"http://interface.api.haodai.com/"]) {
-            UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
-            nav.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
-            [_webView.scrollView addSubview:nav];
-            nav.text = @"贷款";
-            nav.textAlignment = NSTextAlignmentCenter;
-            nav.textColor = [UIColor whiteColor];
-            nav.font = [UIFont systemFontOfSize:18];
-            //_webView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - 44);
-        }
-        
         if (![html hasPrefix:@"http://www.91jisudai.com/"]) {
             UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
             nav.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
             [_webView.scrollView addSubview:nav];
             if ([html hasPrefix:@"http://www.kuaicha.info"]) {
                 nav.text = @"征信查询";
+            }else if([html hasPrefix:@"http://interface.api.haodai.com"]){
+                nav.text = @"申请贷款";
+            }else if([html hasPrefix:@"http://91jisudai.com/Mobile/jsq"]) {
+                nav.text = @"贷款计算器";
             }else {
                 nav.text = @"申请信用卡";
+                nav.frame = CGRectMake(0, 0, self.frame.size.width, 44);
             }
             nav.textAlignment = NSTextAlignmentCenter;
             nav.textColor = [UIColor whiteColor];
@@ -163,6 +157,8 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     _back.hidden = NO;
     _mast.hidden = NO;
+     [webView stringByEvaluatingJavaScriptFromString:@"document.body.mat_top='';"];
+    
     [webView stringByEvaluatingJavaScriptFromString:@"document.body.style.webkitTouchCallout='none';"];
     [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
     // Disable callout
