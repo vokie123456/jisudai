@@ -35,6 +35,7 @@
 		AEE825BD1CB77FA200690130 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825BC1CB77FA200690130 /* UIKit.framework */; };
 		AEE825BF1CB77FAC00690130 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825BE1CB77FAC00690130 /* Foundation.framework */; };
 		AEE825C11CB7849E00690130 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825C01CB7849E00690130 /* libc++.tbd */; };
+		AEE825D11CBB71EA00690130 /* CreditManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE825D01CBB71EA00690130 /* CreditManagerViewController.m */; };
 		AEE8BEF11CAE56B000064618 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */; };
 		AEE8BEF41CAE570C00064618 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF31CAE570C00064618 /* UITextView+Placeholder.m */; };
 		AEE8BEF71CAE571B00064618 /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF61CAE571B00064618 /* ZYTextField.m */; };
@@ -110,6 +111,9 @@
 		AEE825BC1CB77FA200690130 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AEE825BE1CB77FAC00690130 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AEE825C01CB7849E00690130 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		AEE825CD1CBB6FAB00690130 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		AEE825CF1CBB71EA00690130 /* CreditManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditManagerViewController.h; sourceTree = "<group>"; };
+		AEE825D01CBB71EA00690130 /* CreditManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditManagerViewController.m; sourceTree = "<group>"; };
 		AEE8BEEF1CAE56B000064618 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
 		AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
 		AEE8BEF21CAE570C00064618 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
@@ -272,6 +276,8 @@
 				AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */,
 				AEE8BF001CAE61CD00064618 /* AboutUsViewController.h */,
 				AEE8BF011CAE61CD00064618 /* AboutUsViewController.m */,
+				AEE825CF1CBB71EA00690130 /* CreditManagerViewController.h */,
+				AEE825D01CBB71EA00690130 /* CreditManagerViewController.m */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -290,7 +296,7 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		AEE825AB1CB763E100690130 /* weixing */ = {
+		AEE825AB1CB763E100690130 /* WeiXing */ = {
 			isa = PBXGroup;
 			children = (
 				AEE825AC1CB763E100690130 /* libWeChatSDK.a */,
@@ -299,14 +305,14 @@
 				AEE825AF1CB763E100690130 /* WXApi.h */,
 				AEE825B01CB763E100690130 /* WXApiObject.h */,
 			);
-			name = weixing;
+			name = WeiXing;
 			path = SDK1.6.2;
 			sourceTree = "<group>";
 		};
 		AEE825B31CB763F600690130 /* ThreePublic */ = {
 			isa = PBXGroup;
 			children = (
-				AEE825AB1CB763E100690130 /* weixing */,
+				AEE825AB1CB763E100690130 /* WeiXing */,
 			);
 			name = ThreePublic;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 		FC78667ADE3516AE725D53FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEE825CD1CBB6FAB00690130 /* libxml2.tbd */,
 				AEE825C01CB7849E00690130 /* libc++.tbd */,
 				AEE825BE1CB77FAC00690130 /* Foundation.framework */,
 				AEE825BC1CB77FA200690130 /* UIKit.framework */,
@@ -396,7 +403,7 @@
 				TargetAttributes = {
 					AE7A01031C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = X92C369FEQ;
+						DevelopmentTeam = 3YR7CL6SMV;
 					};
 					AE7A011C1C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
@@ -518,6 +525,7 @@
 				AE7A01091C9675A60058045F /* main.m in Sources */,
 				AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */,
 				AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */,
+				AEE825D11CBB71EA00690130 /* CreditManagerViewController.m in Sources */,
 				AEE8BF021CAE61CD00064618 /* AboutUsViewController.m in Sources */,
 				AEE8BEF11CAE56B000064618 /* FeedBackViewController.m in Sources */,
 				AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */,
@@ -677,6 +685,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/jisudai/SDK1.6.2",
+					"$(PROJECT_DIR)/jisudai",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -701,6 +710,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/jisudai/SDK1.6.2",
+					"$(PROJECT_DIR)/jisudai",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -13,6 +13,8 @@
 #import "WXApi.h"
 #import "JCCDefine.h"
 #import "WXApiObject.h"
+#import "CreditManagerViewController.h"
+#import "MobClick.h"
 
 #define Target_iOS7   ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0f) ? YES : NO
 #define mRateUrl      [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",@"1094308710"]
@@ -29,8 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titles = [NSArray arrayWithObjects:@"征信查询",@"贷款计算器",@"分享",@"意见反馈",@"评分",@"关于我们", nil];
-    self.icons = @[@"zhengxin",@"jisuanqi",@"fenxiang",@"yijian",@"score",@"aboutUs"];
+    self.tableView.separatorColor = [UIColor colorWithRed:224.f/255.f green:224.f/255.f blue:224.f/255.f alpha:1.0];
+    self.titles = [NSArray arrayWithObjects:@"信贷经理入驻",@"征信查询",@"贷款计算器",@"分享",@"意见反馈",@"评分",@"关于我们", nil];
+    self.icons = @[@"xindaijingli",@"zhengxin",@"jisuanqi",@"fenxiang",@"yijian",@"score",@"aboutUs"];
     // Do any additional setup after loading the view.
 }
 
@@ -56,21 +59,34 @@
     return 44.f;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 15.f;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
+        [MobClick event:@"CreditManager"];
+        CreditManagerViewController *web = [[CreditManagerViewController alloc] init];
+        web.url = @"http://91jisudai.com/Mobile/xdy";
+        web.hidesBottomBarWhenPushed = YES;
+        web.title = @"信贷经理入驻";
+        [self.navigationController pushViewController:web animated:YES];
+    }else if (indexPath.row == 1) {
+        [MobClick event:@"zhengXingLook"];
         JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
         web.url = @"http://www.kuaicha.info/creditCB.action?appKey=e7cba276ade84d51b325e83fb810dae8&appName=jisudai&loginType=IDCARD_PASSWORD&callBackURL=http://www.51daikuan.org/index.php/Api/Index/up_credit";
         web.hidesBottomBarWhenPushed = YES;
         web.webTitle = @"征信查询";
         [self.navigationController pushViewController:web animated:YES];
-    }else if(indexPath.row == 1) {
-        JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
+    }else if(indexPath.row == 2) {
+        [MobClick event:@"jsq"];
+        CreditManagerViewController *web = [[CreditManagerViewController alloc] init];
         web.url = @"http://91jisudai.com/Mobile/jsq/city/beijing.html";
         web.hidesBottomBarWhenPushed = YES;
-        web.webTitle = @"贷款计算器";
+        web.title = @"贷款计算器";
         [self.navigationController pushViewController:web animated:YES];
-    }else if (indexPath.row == 2) {
+    }else if (indexPath.row == 3) {
         if ([WXApi isWXAppInstalled]) {
             UIAlertView *alertView = [[UIAlertView alloc] init];
             [alertView addButtonWithTitle:@"微信好友"];
@@ -79,17 +95,20 @@
             alertView.delegate = self;
             [alertView show];
         }
-    }else if(indexPath.row == 3) {
+    }else if(indexPath.row == 4) {
+        [MobClick event:@"yijian"];
         FeedBackViewController *feedback = StoryBoardDefined(@"FeedBackViewController");
         feedback.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:feedback animated:YES];
-    }else if(indexPath.row == 4) {
+    }else if(indexPath.row == 5) {
+        [MobClick event:@"pingfen"];
         NSURL *iTunesURL = [NSURL URLWithString:mRateUrl];
         if (Target_iOS7) {
             iTunesURL = [NSURL URLWithString:mRateUrl_iOS7];
         }
         [[UIApplication sharedApplication] openURL:iTunesURL];
-    }else if(indexPath.row == 5) {
+    }else if(indexPath.row == 6) {
+        [MobClick event:@"aboutUs"];
         AboutUsViewController *us = StoryBoardDefined(@"AboutUsViewController");
         us.hidesBottomBarWhenPushed = YES;
         us.title = @"关于我们";
@@ -100,7 +119,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
-        
+        [MobClick event:@"shareFriend"];
         WXWebpageObject *ext = [WXWebpageObject object];
         ext.webpageUrl = @"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0";
         
@@ -116,7 +135,7 @@
         [WXApi sendReq:req];
         
     }else if(buttonIndex == 1) {
-    
+       [MobClick event:@"shareFriendCicle"];
         WXWebpageObject *ext = [WXWebpageObject object];
         ext.webpageUrl = @"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0";
         

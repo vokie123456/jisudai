@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="u7I-yo-l15">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="u7I-yo-l15">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--贷款-->
@@ -373,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tA8-CY-e3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="940"/>
+            <point key="canvasLocation" x="-92" y="1540"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="uT3-yx-0q8">
@@ -394,19 +394,34 @@
                                     <constraint firstAttribute="width" constant="96" id="IQr-le-G2p"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhH-A7-BSv">
-                                <rect key="frame" x="91" y="203" width="139" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhH-A7-BSv">
+                                <rect key="frame" x="150" y="203" width="21" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="邮箱：494485961@qq.com" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AqL-b5-9xM">
+                                <rect key="frame" x="49" y="231" width="223" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="Cvp-iW-0ZH"/>
+                                    <constraint firstAttribute="height" constant="32" id="rir-sw-tQ7"/>
+                                </constraints>
+                                <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yhH-A7-BSv" firstAttribute="centerX" secondItem="hQO-mh-8Fo" secondAttribute="centerX" id="9Aa-7b-uAA"/>
                             <constraint firstItem="yhH-A7-BSv" firstAttribute="centerX" secondItem="NyU-z0-3ee" secondAttribute="centerX" id="eNp-tN-JYk"/>
                             <constraint firstItem="NyU-z0-3ee" firstAttribute="top" secondItem="CaR-zj-SzX" secondAttribute="bottom" constant="63" id="gev-TG-r3L"/>
                             <constraint firstItem="NyU-z0-3ee" firstAttribute="centerX" secondItem="hQO-mh-8Fo" secondAttribute="centerX" id="hdJ-76-lve"/>
+                            <constraint firstItem="AqL-b5-9xM" firstAttribute="centerX" secondItem="hQO-mh-8Fo" secondAttribute="centerX" id="jc9-sr-Gwk"/>
                             <constraint firstItem="yhH-A7-BSv" firstAttribute="top" secondItem="NyU-z0-3ee" secondAttribute="bottom" constant="24" id="qcr-LU-mPV"/>
+                            <constraint firstItem="yhH-A7-BSv" firstAttribute="centerX" secondItem="hQO-mh-8Fo" secondAttribute="centerX" id="vY7-YT-usC"/>
+                            <constraint firstItem="AqL-b5-9xM" firstAttribute="top" secondItem="yhH-A7-BSv" secondAttribute="bottom" constant="8" id="yMw-sr-Xal"/>
                         </constraints>
                     </view>
                     <connections>
@@ -415,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2p-Bh-wuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="1621"/>
+            <point key="canvasLocation" x="-92" y="837"/>
         </scene>
     </scenes>
     <resources>
