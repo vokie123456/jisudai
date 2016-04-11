@@ -53,7 +53,6 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSString *str = @"document.getElementsByClassName('mat_top')[0].remove();";
     [webView stringByEvaluatingJavaScriptFromString:str];
-    
     [[webView viewWithTag:3000] removeFromSuperview];
 }
 
