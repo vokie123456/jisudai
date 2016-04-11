@@ -50,6 +50,7 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     ((UILabel*)[cell viewWithTag:101]).text = self.titles[indexPath.row];
     ((UIImageView*)[cell viewWithTag:100]).image = [UIImage imageNamed:[self.icons objectAtIndex:indexPath.row]];
     return cell;
