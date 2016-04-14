@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1F7FF2B772D5573A48E68B20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFF7A3F2BF16D036C8E217C /* libPods.a */; };
+		AE19DA901CBF38AD00E601E5 /* WEHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DA8C1CBF38AD00E601E5 /* WEHelper.m */; };
+		AE19DA911CBF38AD00E601E5 /* AppFun.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DA8F1CBF38AD00E601E5 /* AppFun.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AE19DA951CBF397200E601E5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DA941CBF397200E601E5 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AE19DA981CBF3AA700E601E5 /* ImagePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DA971CBF3AA700E601E5 /* ImagePlayerView.m */; };
+		AE19DAA11CBF3E3100E601E5 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAA01CBF3E3100E601E5 /* HomeTableViewCell.m */; };
+		AE19DAA51CBF401000E601E5 /* HotBankView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAA31CBF401000E601E5 /* HotBankView.m */; };
+		AE19DAA61CBF401000E601E5 /* HotBankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE19DAA41CBF401000E601E5 /* HotBankView.xib */; };
+		AE19DAAA1CBF4D5500E601E5 /* HotLoanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAA91CBF4D5500E601E5 /* HotLoanTableViewCell.m */; };
+		AE19DAAD1CBF4D6800E601E5 /* HotCreditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */; };
+		AE19DAB01CBF9F8100E601E5 /* ShanYinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAAF1CBF9F8100E601E5 /* ShanYinViewController.m */; };
 		AE7A01091C9675A60058045F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01081C9675A60058045F /* main.m */; };
 		AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A010B1C9675A60058045F /* AppDelegate.m */; };
 		AE7A01121C9675A60058045F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7A01101C9675A60058045F /* Main.storyboard */; };
@@ -23,7 +33,6 @@
 		AE7A01501C96BEB60058045F /* ZYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A014F1C96BEB60058045F /* ZYNavigationViewController.m */; };
 		AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01521C96C4D30058045F /* ZYTabViewController.m */; };
 		AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01551C96C4EF0058045F /* UIColor+Extend.m */; };
-		AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01831C9A487A0058045F /* CreditMessageViewController.m */; };
 		AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */; };
 		AE7CFB4F1CACCF36003EC1CF /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */; };
 		AEE825B11CB763E100690130 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE825AC1CB763E100690130 /* libWeChatSDK.a */; };
@@ -63,6 +72,28 @@
 
 /* Begin PBXFileReference section */
 		A1E92D080D59A954FB1AF1F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AE19DA8B1CBF38AD00E601E5 /* WEHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHelper.h; sourceTree = "<group>"; };
+		AE19DA8C1CBF38AD00E601E5 /* WEHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEHelper.m; sourceTree = "<group>"; };
+		AE19DA8D1CBF38AD00E601E5 /* AppMacDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMacDef.h; sourceTree = "<group>"; };
+		AE19DA8E1CBF38AD00E601E5 /* AppFun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppFun.h; sourceTree = "<group>"; };
+		AE19DA8F1CBF38AD00E601E5 /* AppFun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppFun.m; sourceTree = "<group>"; };
+		AE19DA921CBF38D300E601E5 /* jisudai-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "jisudai-PrefixHeader.pch"; sourceTree = "<group>"; };
+		AE19DA931CBF397200E601E5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		AE19DA941CBF397200E601E5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		AE19DA961CBF3AA700E601E5 /* ImagePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePlayerView.h; sourceTree = "<group>"; };
+		AE19DA971CBF3AA700E601E5 /* ImagePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePlayerView.m; sourceTree = "<group>"; };
+		AE19DA9D1CBF3DB600E601E5 /* HTML5_URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTML5_URL.h; sourceTree = "<group>"; };
+		AE19DA9F1CBF3E3100E601E5 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		AE19DAA01CBF3E3100E601E5 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		AE19DAA21CBF401000E601E5 /* HotBankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotBankView.h; sourceTree = "<group>"; };
+		AE19DAA31CBF401000E601E5 /* HotBankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotBankView.m; sourceTree = "<group>"; };
+		AE19DAA41CBF401000E601E5 /* HotBankView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotBankView.xib; sourceTree = "<group>"; };
+		AE19DAA81CBF4D5500E601E5 /* HotLoanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotLoanTableViewCell.h; sourceTree = "<group>"; };
+		AE19DAA91CBF4D5500E601E5 /* HotLoanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotLoanTableViewCell.m; sourceTree = "<group>"; };
+		AE19DAAB1CBF4D6800E601E5 /* HotCreditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCreditTableViewCell.h; sourceTree = "<group>"; };
+		AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCreditTableViewCell.m; sourceTree = "<group>"; };
+		AE19DAAE1CBF9F8100E601E5 /* ShanYinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShanYinViewController.h; sourceTree = "<group>"; };
+		AE19DAAF1CBF9F8100E601E5 /* ShanYinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShanYinViewController.m; sourceTree = "<group>"; };
 		AE7A01041C9675A60058045F /* jisudai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jisudai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7A01081C9675A60058045F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE7A010A1C9675A60058045F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,8 +124,6 @@
 		AE7A01521C96C4D30058045F /* ZYTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTabViewController.m; sourceTree = "<group>"; };
 		AE7A01541C96C4EF0058045F /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
 		AE7A01551C96C4EF0058045F /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
-		AE7A01821C9A487A0058045F /* CreditMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditMessageViewController.h; sourceTree = "<group>"; };
-		AE7A01831C9A487A0058045F /* CreditMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditMessageViewController.m; sourceTree = "<group>"; };
 		AE7A01911C9B9EFA0058045F /* KLReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLReachabilityManager.h; sourceTree = "<group>"; };
 		AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLReachabilityManager.m; sourceTree = "<group>"; };
 		AE7CFB4D1CACCF36003EC1CF /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
@@ -173,9 +202,79 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AE19DA991CBF3CC400E601E5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AE19DAA71CBF401400E601E5 /* View */,
+				AE19DA9E1CBF3E1000E601E5 /* Cell */,
+				AE7A01441C96AFBD0058045F /* MainViewController.h */,
+				AE7A01451C96AFBD0058045F /* MainViewController.m */,
+				AE19DAAE1CBF9F8100E601E5 /* ShanYinViewController.h */,
+				AE19DAAF1CBF9F8100E601E5 /* ShanYinViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		AE19DA9A1CBF3CD900E601E5 /* DaiKuan */ = {
+			isa = PBXGroup;
+			children = (
+				AE7A01481C96B0000058045F /* DaikuanViewController.h */,
+				AE7A01491C96B0000058045F /* DaikuanViewController.m */,
+			);
+			name = DaiKuan;
+			sourceTree = "<group>";
+		};
+		AE19DA9B1CBF3CEA00E601E5 /* CreditList */ = {
+			isa = PBXGroup;
+			children = (
+				AE7A014B1C96B00F0058045F /* CreditCardViewController.h */,
+				AE7A014C1C96B00F0058045F /* CreditCardViewController.m */,
+			);
+			name = CreditList;
+			sourceTree = "<group>";
+		};
+		AE19DA9C1CBF3D0B00E601E5 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AE7CFB4D1CACCF36003EC1CF /* UserViewController.h */,
+				AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */,
+				AEE8BEEF1CAE56B000064618 /* FeedBackViewController.h */,
+				AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */,
+				AEE8BF001CAE61CD00064618 /* AboutUsViewController.h */,
+				AEE8BF011CAE61CD00064618 /* AboutUsViewController.m */,
+				AEE825CF1CBB71EA00690130 /* CreditManagerViewController.h */,
+				AEE825D01CBB71EA00690130 /* CreditManagerViewController.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		AE19DA9E1CBF3E1000E601E5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AE19DA9F1CBF3E3100E601E5 /* HomeTableViewCell.h */,
+				AE19DAA01CBF3E3100E601E5 /* HomeTableViewCell.m */,
+				AE19DAA81CBF4D5500E601E5 /* HotLoanTableViewCell.h */,
+				AE19DAA91CBF4D5500E601E5 /* HotLoanTableViewCell.m */,
+				AE19DAAB1CBF4D6800E601E5 /* HotCreditTableViewCell.h */,
+				AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		AE19DAA71CBF401400E601E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE19DAA21CBF401000E601E5 /* HotBankView.h */,
+				AE19DAA31CBF401000E601E5 /* HotBankView.m */,
+				AE19DAA41CBF401000E601E5 /* HotBankView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		AE7A00FB1C9675A60058045F = {
 			isa = PBXGroup;
 			children = (
+				AE19DA921CBF38D300E601E5 /* jisudai-PrefixHeader.pch */,
 				AE7A01911C9B9EFA0058045F /* KLReachabilityManager.h */,
 				AE7A01921C9B9EFA0058045F /* KLReachabilityManager.m */,
 				AE7A01061C9675A60058045F /* jisudai */,
@@ -255,6 +354,8 @@
 				AE7A013E1C96AF110058045F /* JCCBaseWebViewController.m */,
 				AE7A01401C96AF200058045F /* MKWebView.h */,
 				AE7A01411C96AF200058045F /* MKWebView.m */,
+				AE19DA961CBF3AA700E601E5 /* ImagePlayerView.h */,
+				AE19DA971CBF3AA700E601E5 /* ImagePlayerView.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -262,22 +363,10 @@
 		AE7CFB4A1CACCEA4003EC1CF /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				AE7A01441C96AFBD0058045F /* MainViewController.h */,
-				AE7A01451C96AFBD0058045F /* MainViewController.m */,
-				AE7A01481C96B0000058045F /* DaikuanViewController.h */,
-				AE7A01491C96B0000058045F /* DaikuanViewController.m */,
-				AE7A014B1C96B00F0058045F /* CreditCardViewController.h */,
-				AE7A014C1C96B00F0058045F /* CreditCardViewController.m */,
-				AE7A01821C9A487A0058045F /* CreditMessageViewController.h */,
-				AE7A01831C9A487A0058045F /* CreditMessageViewController.m */,
-				AE7CFB4D1CACCF36003EC1CF /* UserViewController.h */,
-				AE7CFB4E1CACCF36003EC1CF /* UserViewController.m */,
-				AEE8BEEF1CAE56B000064618 /* FeedBackViewController.h */,
-				AEE8BEF01CAE56B000064618 /* FeedBackViewController.m */,
-				AEE8BF001CAE61CD00064618 /* AboutUsViewController.h */,
-				AEE8BF011CAE61CD00064618 /* AboutUsViewController.m */,
-				AEE825CF1CBB71EA00690130 /* CreditManagerViewController.h */,
-				AEE825D01CBB71EA00690130 /* CreditManagerViewController.m */,
+				AE19DA991CBF3CC400E601E5 /* Main */,
+				AE19DA9C1CBF3D0B00E601E5 /* User */,
+				AE19DA9B1CBF3CEA00E601E5 /* CreditList */,
+				AE19DA9A1CBF3CD900E601E5 /* DaiKuan */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -285,6 +374,11 @@
 		AE7CFB4C1CACCED8003EC1CF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AE19DA8B1CBF38AD00E601E5 /* WEHelper.h */,
+				AE19DA8C1CBF38AD00E601E5 /* WEHelper.m */,
+				AE19DA8D1CBF38AD00E601E5 /* AppMacDef.h */,
+				AE19DA8E1CBF38AD00E601E5 /* AppFun.h */,
+				AE19DA8F1CBF38AD00E601E5 /* AppFun.m */,
 				AEE8BEF91CAE574B00064618 /* JCCDefine.h */,
 				AEE8BEF21CAE570C00064618 /* UITextView+Placeholder.h */,
 				AEE8BEF31CAE570C00064618 /* UITextView+Placeholder.m */,
@@ -292,6 +386,7 @@
 				AE7A01551C96C4EF0058045F /* UIColor+Extend.m */,
 				AEE8BEFA1CAE5B6000064618 /* UIViewExt.h */,
 				AEE8BEFB1CAE5B6000064618 /* UIViewExt.m */,
+				AE19DA9D1CBF3DB600E601E5 /* HTML5_URL.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -312,6 +407,8 @@
 		AEE825B31CB763F600690130 /* ThreePublic */ = {
 			isa = PBXGroup;
 			children = (
+				AE19DA931CBF397200E601E5 /* Reachability.h */,
+				AE19DA941CBF397200E601E5 /* Reachability.m */,
 				AEE825AB1CB763E100690130 /* WeiXing */,
 			);
 			name = ThreePublic;
@@ -403,7 +500,7 @@
 				TargetAttributes = {
 					AE7A01031C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = X92C369FEQ;
+						DevelopmentTeam = 3YR7CL6SMV;
 					};
 					AE7A011C1C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
@@ -444,6 +541,7 @@
 				AE7A01141C9675A60058045F /* Assets.xcassets in Resources */,
 				AEE8BEFE1CAE615500064618 /* logo.png in Resources */,
 				AE7A01121C9675A60058045F /* Main.storyboard in Resources */,
+				AE19DAA61CBF401000E601E5 /* HotBankView.xib in Resources */,
 				AEE825B21CB763E100690130 /* read_me.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,18 +621,26 @@
 				AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */,
 				AEE8BEF71CAE571B00064618 /* ZYTextField.m in Sources */,
 				AE7A01091C9675A60058045F /* main.m in Sources */,
+				AE19DAAA1CBF4D5500E601E5 /* HotLoanTableViewCell.m in Sources */,
 				AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */,
+				AE19DAAD1CBF4D6800E601E5 /* HotCreditTableViewCell.m in Sources */,
 				AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */,
 				AEE825D11CBB71EA00690130 /* CreditManagerViewController.m in Sources */,
+				AE19DA981CBF3AA700E601E5 /* ImagePlayerView.m in Sources */,
+				AE19DAA51CBF401000E601E5 /* HotBankView.m in Sources */,
+				AE19DA911CBF38AD00E601E5 /* AppFun.m in Sources */,
 				AEE8BF021CAE61CD00064618 /* AboutUsViewController.m in Sources */,
 				AEE8BEF11CAE56B000064618 /* FeedBackViewController.m in Sources */,
 				AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */,
 				AE7A01461C96AFBD0058045F /* MainViewController.m in Sources */,
+				AE19DA951CBF397200E601E5 /* Reachability.m in Sources */,
 				AE7A01421C96AF200058045F /* MKWebView.m in Sources */,
 				AE7A014D1C96B00F0058045F /* CreditCardViewController.m in Sources */,
 				AE7CFB4F1CACCF36003EC1CF /* UserViewController.m in Sources */,
+				AE19DAB01CBF9F8100E601E5 /* ShanYinViewController.m in Sources */,
 				AEE8BEF41CAE570C00064618 /* UITextView+Placeholder.m in Sources */,
-				AE7A01841C9A487A0058045F /* CreditMessageViewController.m in Sources */,
+				AE19DAA11CBF3E3100E601E5 /* HomeTableViewCell.m in Sources */,
+				AE19DA901CBF38AD00E601E5 /* WEHelper.m in Sources */,
 				AEE8BEFC1CAE5B6000064618 /* UIViewExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,8 +786,10 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/jisudai-PrefixHeader.pch";
 				INFOPLIST_FILE = jisudai/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -691,7 +799,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -705,8 +813,10 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/jisudai-PrefixHeader.pch";
 				INFOPLIST_FILE = jisudai/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -716,7 +826,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

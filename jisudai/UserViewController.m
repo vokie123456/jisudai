@@ -17,8 +17,6 @@
 #import "MobClick.h"
 
 #define Target_iOS7   ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0f) ? YES : NO
-#define mRateUrl      [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",@"1094308710"]
-#define mRateUrl_iOS7 [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@",@"1094308710"]
 
 @interface UserViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -70,21 +68,21 @@
     if (indexPath.row == 0) {
         [MobClick event:@"CreditManager"];
         CreditManagerViewController *web = [[CreditManagerViewController alloc] init];
-        web.url = @"http://91jisudai.com/Mobile/xdy";
+        web.url = XingDaiManagerURL;
         web.hidesBottomBarWhenPushed = YES;
         web.title = @"信贷经理入驻";
         [self.navigationController pushViewController:web animated:YES];
     }else if (indexPath.row == 1) {
         [MobClick event:@"zhengXingLook"];
         JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
-        web.url = @"http://www.kuaicha.info/creditCB.action?appKey=e7cba276ade84d51b325e83fb810dae8&appName=jisudai&loginType=IDCARD_PASSWORD&callBackURL=http://www.51daikuan.org/index.php/Api/Index/up_credit";
+        web.url = ZhengXinURL;
         web.hidesBottomBarWhenPushed = YES;
         web.webTitle = @"征信查询";
         [self.navigationController pushViewController:web animated:YES];
     }else if(indexPath.row == 2) {
         [MobClick event:@"jsq"];
         CreditManagerViewController *web = [[CreditManagerViewController alloc] init];
-        web.url = @"http://91jisudai.com/Mobile/jsq/city/beijing.html";
+        web.url = DaiKuanJSQURL;
         web.hidesBottomBarWhenPushed = YES;
         web.title = @"贷款计算器";
         [self.navigationController pushViewController:web animated:YES];
@@ -123,10 +121,9 @@
     if (buttonIndex == 0) {
         [MobClick event:@"shareFriend"];
         WXWebpageObject *ext = [WXWebpageObject object];
-        ext.webpageUrl = @"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0";
-        
+        ext.webpageUrl = APPDownAddress;
         WXMediaMessage *message = [WXMediaMessage message];
-        message.title = @"极速贷款，在线预约信用卡营销员";
+        message.title = @"极速贷款,在线预约信用卡营销员";
         message.description = @"我找到一个可以快速申请贷款和信用卡的工具,赶快戳进来吧";
         message.mediaObject = ext;
         [message setThumbImage:[UIImage imageNamed:@"logo"]];
@@ -139,10 +136,9 @@
     }else if(buttonIndex == 1) {
        [MobClick event:@"shareFriendCicle"];
         WXWebpageObject *ext = [WXWebpageObject object];
-        ext.webpageUrl = @"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0";
-        
+        ext.webpageUrl = APPDownAddress;
         WXMediaMessage *message = [WXMediaMessage message];
-        message.title = @"极速贷款，在线预约信用卡营销员";
+        message.title = @"极速贷款,在线预约信用卡营销员";
         message.description = @"我找到一个可以快速申请贷款和信用卡的工具,赶快戳进来吧";
         message.mediaObject = ext;
         [message setThumbImage:[UIImage imageNamed:@"logo"]];

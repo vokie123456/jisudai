@@ -39,7 +39,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     if (_webView && _loadFail) {
-//        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.91jisudai.com/Mobile/creditcard/"] cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:60];
+//       NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.91jisudai.com/Mobile/creditcard/"] cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:60];
         [_webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.91jisudai.com/Mobile/creditcard/"]]];
     }
 }

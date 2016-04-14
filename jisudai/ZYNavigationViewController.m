@@ -25,6 +25,8 @@
     [[UINavigationBar appearance] setTitleTextAttributes:attributes];
     self.navigationBar.tintColor = [UIColor whiteColor];
   
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
     
     //移除黑线
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];

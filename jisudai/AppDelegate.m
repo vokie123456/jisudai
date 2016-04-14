@@ -38,7 +38,6 @@
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
     }
     [WXApi registerApp:@"wx164fc6d2eb2ea1d6"];
-    
     return YES;
 }
 

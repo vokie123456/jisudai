@@ -1,0 +1,25 @@
+//
+//  jisudai-PrefixHeader.pch
+//  jisudai
+//
+//  Created by haodai on 16/4/14.
+//  Copyright © 2016年 xiaoya. All rights reserved.
+//
+
+#ifndef jisudai_PrefixHeader_pch
+#define jisudai_PrefixHeader_pch
+
+#import "JCCDefine.h"
+#import "AppMacDef.h"
+#import "UIViewExt.h"
+#import "AppFun.h"
+#import "WEHelper.h"
+#import "MobClick.h"
+#import "UIColor+Extend.h"
+#import "HTML5_URL.h"
+#import "KLReachabilityManager.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* jisudai_PrefixHeader_pch */

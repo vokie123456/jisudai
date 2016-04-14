@@ -52,7 +52,7 @@
 
 #define TextColorTip        RGBCOLOR(153, 153, 153) //提示文字
 
-#define LineColor  RGBCOLOR(222, 222, 222)//边框线条
+#define LineColor  RGBCOLOR(240, 240, 240)//边框线条
 
 
 // 背景灰
