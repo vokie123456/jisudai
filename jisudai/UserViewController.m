@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *titles;
 @property (nonatomic, strong) NSArray *icons;
+
 @end
 
 @implementation UserViewController
