@@ -13,6 +13,7 @@
 #import "HotLoanTableViewCell.h"
 #import "JCCBaseWebViewController.h"
 #import "ShanYinViewController.h"
+#import <BmobSDK/BmobQuery.h>
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate,ImagePlayerViewDelegate>
 @property (weak, nonatomic) IBOutlet ImagePlayerView *adImagePlayerView;
@@ -35,10 +36,19 @@
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.backgroundColor = BackgroundColor;
     self.tableView.separatorColor = LineColor;
+    
     self.ads = @[@"banner1",@"banner2",@"banner3"];
     self.topArray = @[@{@"icon":@"xedk",@"title":@"小额贷款",@"des":@"上班族学生"},@{@"icon":@"dedk",@"title":@"大额贷款",@"des":@"企业房车贷"},@{@"icon":@"xyk",@"title":@"信用卡",@"des":@"省心省力"},@{@"icon":@"xindaijingli",@"title":@"信贷经理",@"des":@"入驻抢单"}];
     [_adImagePlayerView initWithCount:3 delegate:self];
-//    self.tableView.separatorColor =  LineColor;
+
+    
+    [[HTTPRequestManager manager] POST:@"HotLoan" dictionary:@{} success:^(id responseObject) {
+        self.hotLoanArray = responseObject;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        
+    } view:self.view progress:YES];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -61,7 +71,7 @@
     if (section == 0) {
         return 1;
     }else if(section == 1) {
-        return 3;
+        return self.hotLoanArray.count + 1;
     }else if(section == 2) {
         return 3;
     }
@@ -85,6 +95,7 @@
             return cell;
         }else {
             HotLoanTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell3"];
+            cell.dic = self.hotLoanArray[indexPath.row - 1];
             return cell;
         }
     }else if(indexPath.section == 2) {

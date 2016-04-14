@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="u7I-yo-l15">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="u7I-yo-l15">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--贷款-->
@@ -212,19 +212,10 @@
                                                     <color key="textColor" red="0.2784313725" green="0.28627450980000002" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFj-5X-pXu">
-                                                    <rect key="frame" x="0.0" y="48" width="320" height="1"/>
-                                                    <color key="backgroundColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="VVV-0l-ApC"/>
-                                                    </constraints>
-                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="bFj-5X-pXu" secondAttribute="trailing" id="54m-MF-z8D"/>
                                                 <constraint firstItem="Vmx-aO-fwf" firstAttribute="centerY" secondItem="8y1-c8-ucS" secondAttribute="centerY" id="O44-Sq-7Jv"/>
                                                 <constraint firstItem="Vmx-aO-fwf" firstAttribute="leading" secondItem="8y1-c8-ucS" secondAttribute="leading" constant="15" id="buv-hM-6Pt"/>
-                                                <constraint firstItem="bFj-5X-pXu" firstAttribute="leading" secondItem="8y1-c8-ucS" secondAttribute="leading" id="m6I-YO-Q7k"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -301,18 +292,9 @@
                                                     <color key="textColor" red="0.2784313725" green="0.28627450980000002" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alN-RS-Do8">
-                                                    <rect key="frame" x="0.0" y="48" width="320" height="1"/>
-                                                    <color key="backgroundColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="wz2-Xd-yaO"/>
-                                                    </constraints>
-                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4LN-hN-8mz" firstAttribute="centerY" secondItem="vA1-Jm-bEN" secondAttribute="centerY" id="40h-mS-BX1"/>
-                                                <constraint firstAttribute="trailing" secondItem="alN-RS-Do8" secondAttribute="trailing" id="CRJ-Ud-Mn3"/>
-                                                <constraint firstItem="alN-RS-Do8" firstAttribute="leading" secondItem="vA1-Jm-bEN" secondAttribute="leading" id="KaS-Jg-KHY"/>
                                                 <constraint firstItem="4LN-hN-8mz" firstAttribute="leading" secondItem="vA1-Jm-bEN" secondAttribute="leading" constant="15" id="XTw-Xf-hzx"/>
                                             </constraints>
                                         </tableViewCellContentView>

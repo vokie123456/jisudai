@@ -28,4 +28,12 @@
     // Configure the view for the selected state
 }
 
+- (void)setDic:(BmobObject *)dic {
+    _dic = dic;
+    [_img sd_setImageWithURL:[NSURL URLWithString:[[dic objectForKey:@"imgUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    _name.text = [dic objectForKey:@"name"];
+    _num.text = [NSString stringWithFormat:@"申请人数：%@人",[dic objectForKey:@"applyNum"]];
+    _rate.text = [dic objectForKey:@"rate"];
+}
+
 @end

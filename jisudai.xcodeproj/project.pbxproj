@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18DA9F911CBFDD920087E2E6 /* HTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA9F901CBFDD920087E2E6 /* HTTPRequestManager.m */; };
 		1F7FF2B772D5573A48E68B20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFF7A3F2BF16D036C8E217C /* libPods.a */; };
 		AE19DA901CBF38AD00E601E5 /* WEHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DA8C1CBF38AD00E601E5 /* WEHelper.m */; };
 		AE19DA911CBF38AD00E601E5 /* AppFun.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DA8F1CBF38AD00E601E5 /* AppFun.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -71,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18DA9F8F1CBFDD920087E2E6 /* HTTPRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequestManager.h; sourceTree = "<group>"; };
+		18DA9F901CBFDD920087E2E6 /* HTTPRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequestManager.m; sourceTree = "<group>"; };
 		A1E92D080D59A954FB1AF1F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE19DA8B1CBF38AD00E601E5 /* WEHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHelper.h; sourceTree = "<group>"; };
 		AE19DA8C1CBF38AD00E601E5 /* WEHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEHelper.m; sourceTree = "<group>"; };
@@ -374,6 +377,8 @@
 		AE7CFB4C1CACCED8003EC1CF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				18DA9F8F1CBFDD920087E2E6 /* HTTPRequestManager.h */,
+				18DA9F901CBFDD920087E2E6 /* HTTPRequestManager.m */,
 				AE19DA8B1CBF38AD00E601E5 /* WEHelper.h */,
 				AE19DA8C1CBF38AD00E601E5 /* WEHelper.m */,
 				AE19DA8D1CBF38AD00E601E5 /* AppMacDef.h */,
@@ -500,7 +505,7 @@
 				TargetAttributes = {
 					AE7A01031C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3YR7CL6SMV;
+						DevelopmentTeam = X92C369FEQ;
 					};
 					AE7A011C1C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
@@ -626,6 +631,7 @@
 				AE19DAAD1CBF4D6800E601E5 /* HotCreditTableViewCell.m in Sources */,
 				AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */,
 				AEE825D11CBB71EA00690130 /* CreditManagerViewController.m in Sources */,
+				18DA9F911CBFDD920087E2E6 /* HTTPRequestManager.m in Sources */,
 				AE19DA981CBF3AA700E601E5 /* ImagePlayerView.m in Sources */,
 				AE19DAA51CBF401000E601E5 /* HotBankView.m in Sources */,
 				AE19DA911CBF38AD00E601E5 /* AppFun.m in Sources */,

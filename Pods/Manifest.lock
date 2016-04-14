@@ -1,13 +1,21 @@
 PODS:
   - BmobSDK (1.6.5)
-  - UMengAnalytics (3.6.6)
+  - MBProgressHUD (0.9.1)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - UMengAnalytics (3.6.4)
 
 DEPENDENCIES:
   - BmobSDK
+  - MBProgressHUD (~> 0.9.1)
+  - SDWebImage (~> 3.7.3)
   - UMengAnalytics
 
 SPEC CHECKSUMS:
   BmobSDK: 9928a9135a3a7823c6d8bd2bcd9baffeb8e6289a
-  UMengAnalytics: 4bf831415146b9c57cb10be65fbd43462ef8cf65
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  UMengAnalytics: d24fb5200e13d2874f36b6337bc129b96511c54e
 
 COCOAPODS: 0.39.0

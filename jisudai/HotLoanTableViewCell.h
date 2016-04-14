@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HotLoanTableViewCell : UITableViewCell
-@property (nonatomic, strong) NSDictionary *dic;
+@property (nonatomic, strong) BmobObject *dic;
 
 @end
