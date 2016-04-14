@@ -403,7 +403,7 @@
 				TargetAttributes = {
 					AE7A01031C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3YR7CL6SMV;
+						DevelopmentTeam = X92C369FEQ;
 					};
 					AE7A011C1C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
@@ -679,6 +679,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = jisudai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
