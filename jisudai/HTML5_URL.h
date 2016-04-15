@@ -27,5 +27,11 @@
 #define XinJinBUSURL1 @"https://weixin.cashbus.com/#/events/promo/5801"
 //现金巴士
 #define XinJinBUSURL2 @"https://weixin.cashbus.com/#/events/promo/5901"
+//马上金融
+#define MasShangJinRong @"http://c.msxf.com/91jisudai"
+
+//办卡进度
+#define BanKaProgress @"http://8.yun.haodai.com/Public/progressinquiry"
+
 
 #endif /* HTML5_URL_h */

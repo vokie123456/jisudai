@@ -36,6 +36,9 @@ NSString *const HTTPConnectionError = @"网络连接失败";
             hud.mode = MBProgressHUDModeText;
             hud.labelText = HTTPServerError;
             [hud hide:YES afterDelay:1];
+            if (failure) {
+                failure(error);
+            }
         }else {
             [hud hide:YES];
             if (success) {

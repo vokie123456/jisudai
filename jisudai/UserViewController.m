@@ -31,8 +31,8 @@
     [super viewDidLoad];
     
     self.tableView.separatorColor = [UIColor colorWithRed:224.f/255.f green:224.f/255.f blue:224.f/255.f alpha:1.0];
-    self.titles = [NSArray arrayWithObjects:@"征信查询",@"贷款计算器",@"分享给好友",@"意见反馈",@"给个好评",@"关于我们", nil];
-    self.icons = @[@"zhengxin",@"jisuanqi",@"fenxiang",@"yijian",@"score",@"aboutUs"];
+    self.titles = [NSArray arrayWithObjects:@"办卡进度",@"征信查询",@"贷款计算器",@"分享给好友",@"意见反馈",@"给个好评",@"关于我们", nil];
+    self.icons = @[@"bankaProgress",@"zhengxin",@"jisuanqi",@"fenxiang",@"yijian",@"score",@"aboutUs"];
     // Do any additional setup after loading the view.
 }
 
@@ -65,21 +65,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-   if (indexPath.row == 0) {
+    if (indexPath.row == 0) {
+        CreditManagerViewController *credit = [[CreditManagerViewController alloc] init];
+        credit.url = BanKaProgress;
+        credit.title = @"办卡进度";
+        credit.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:credit animated:YES];
+    }else if (indexPath.row == 1) {
         [MobClick event:@"zhengXingLook"];
         JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
         web.url = ZhengXinURL;
         web.hidesBottomBarWhenPushed = YES;
         web.webTitle = @"征信查询";
         [self.navigationController pushViewController:web animated:YES];
-    }else if(indexPath.row == 1) {
+    }else if(indexPath.row == 2) {
         [MobClick event:@"jsq"];
         CreditManagerViewController *web = [[CreditManagerViewController alloc] init];
         web.url = DaiKuanJSQURL;
         web.hidesBottomBarWhenPushed = YES;
         web.title = @"贷款计算器";
         [self.navigationController pushViewController:web animated:YES];
-    }else if (indexPath.row == 2) {
+    }else if (indexPath.row == 3) {
         if ([WXApi isWXAppInstalled]) {
             UIAlertView *alertView = [[UIAlertView alloc] init];
             [alertView addButtonWithTitle:@"微信好友"];
@@ -88,19 +94,19 @@
             alertView.delegate = self;
             [alertView show];
         }
-    }else if(indexPath.row == 3) {
+    }else if(indexPath.row == 4) {
         [MobClick event:@"yijian"];
         FeedBackViewController *feedback = StoryBoardDefined(@"FeedBackViewController");
         feedback.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:feedback animated:YES];
-    }else if(indexPath.row == 4) {
+    }else if(indexPath.row == 5) {
         [MobClick event:@"pingfen"];
         NSURL *iTunesURL = [NSURL URLWithString:mRateUrl];
         if (Target_iOS7) {
             iTunesURL = [NSURL URLWithString:mRateUrl_iOS7];
         }
         [[UIApplication sharedApplication] openURL:iTunesURL];
-    }else if(indexPath.row == 5) {
+    }else if(indexPath.row == 6) {
         [MobClick event:@"aboutUs"];
         AboutUsViewController *us = StoryBoardDefined(@"AboutUsViewController");
         us.hidesBottomBarWhenPushed = YES;
@@ -124,7 +130,6 @@
         req.message = message;
         req.scene = 0;
         [WXApi sendReq:req];
-        
     }else if(buttonIndex == 1) {
        [MobClick event:@"shareFriendCicle"];
         WXWebpageObject *ext = [WXWebpageObject object];
@@ -140,7 +145,6 @@
         req.scene = 1;
         
         [WXApi sendReq:req];
-
     }
 }
 

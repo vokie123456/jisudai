@@ -19,11 +19,12 @@
     [super viewDidLoad];
     self.hidesBottomBarWhenPushed = YES;
     _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    _webView.scrollView.bounces = NO;
     _webView.delegate = self;
     [self.view addSubview:_webView];
     if ([_url hasPrefix:@"http://91jisudai.com/Mobile/xdy"]) {
         _webView.frame = CGRectMake(0, -54, self.view.frame.size.width, self.view.frame.size.height + 54);
+    }else if ([_url isEqualToString:BanKaProgress]) {
+        _webView.height = _webView.height - 44;
     }
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
     
