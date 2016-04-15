@@ -36,6 +36,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
+
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [[webView viewWithTag:3000] removeFromSuperview];

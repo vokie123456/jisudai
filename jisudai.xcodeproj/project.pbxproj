@@ -19,6 +19,7 @@
 		AE19DAAA1CBF4D5500E601E5 /* HotLoanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAA91CBF4D5500E601E5 /* HotLoanTableViewCell.m */; };
 		AE19DAAD1CBF4D6800E601E5 /* HotCreditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */; };
 		AE19DAB01CBF9F8100E601E5 /* ShanYinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAAF1CBF9F8100E601E5 /* ShanYinViewController.m */; };
+		AE19DAB21CC0C9C400E601E5 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19DAB11CC0C9C400E601E5 /* share.png */; };
 		AE7A01091C9675A60058045F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01081C9675A60058045F /* main.m */; };
 		AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A010B1C9675A60058045F /* AppDelegate.m */; };
 		AE7A01121C9675A60058045F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7A01101C9675A60058045F /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCreditTableViewCell.m; sourceTree = "<group>"; };
 		AE19DAAE1CBF9F8100E601E5 /* ShanYinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShanYinViewController.h; sourceTree = "<group>"; };
 		AE19DAAF1CBF9F8100E601E5 /* ShanYinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShanYinViewController.m; sourceTree = "<group>"; };
+		AE19DAB11CC0C9C400E601E5 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		AE7A01041C9675A60058045F /* jisudai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jisudai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7A01081C9675A60058045F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE7A010A1C9675A60058045F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		AE7A01061C9675A60058045F /* jisudai */ = {
 			isa = PBXGroup;
 			children = (
+				AE19DAB11CC0C9C400E601E5 /* share.png */,
 				AEE8BEFD1CAE615500064618 /* logo.png */,
 				AE7A010A1C9675A60058045F /* AppDelegate.h */,
 				AE7A010B1C9675A60058045F /* AppDelegate.m */,
@@ -505,7 +508,7 @@
 				TargetAttributes = {
 					AE7A01031C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = X92C369FEQ;
+						DevelopmentTeam = 3YR7CL6SMV;
 					};
 					AE7A011C1C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
@@ -547,6 +550,7 @@
 				AEE8BEFE1CAE615500064618 /* logo.png in Resources */,
 				AE7A01121C9675A60058045F /* Main.storyboard in Resources */,
 				AE19DAA61CBF401000E601E5 /* HotBankView.xib in Resources */,
+				AE19DAB21CC0C9C400E601E5 /* share.png in Resources */,
 				AEE825B21CB763E100690130 /* read_me.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

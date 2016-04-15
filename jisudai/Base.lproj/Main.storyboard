@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="u7I-yo-l15">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="u7I-yo-l15">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--贷款-->
@@ -167,7 +167,7 @@
             </objects>
             <point key="canvasLocation" x="-1274" y="-1098"/>
         </scene>
-        <!--91极速贷-->
+        <!--首页-->
         <scene sceneID="tXi-5X-2Hr">
             <objects>
                 <viewController id="YKs-km-B2b" customClass="MainViewController" sceneMemberID="viewController">
@@ -233,28 +233,28 @@
                                                         <constraint firstAttribute="height" constant="40" id="cX4-Ph-znE"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="申请人数：3000人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kla-kC-6cP">
+                                                    <rect key="frame" x="63" y="41" width="103" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="rfJ-oP-nyh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="月利率：1%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-gg-azE">
+                                                    <rect key="frame" x="246" y="41" width="64" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="现金巴士－十万火急" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttY-k9-NVf">
                                                     <rect key="frame" x="63" y="15" width="126" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Xiy-bI-FGh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="申请人数：3000人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kla-kC-6cP">
-                                                    <rect key="frame" x="63" y="41" width="103" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="rfJ-oP-nyh"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月利率：1%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-gg-azE">
-                                                    <rect key="frame" x="246" y="41" width="64" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.2784313725" green="0.28627450980000002" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -299,13 +299,59 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell5" id="If6-wN-34d" customClass="HotCreditTableViewCell">
-                                        <rect key="frame" x="0.0" y="533" width="320" height="93"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell5" rowHeight="90" id="If6-wN-34d" customClass="HotCreditTableViewCell">
+                                        <rect key="frame" x="0.0" y="533" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="If6-wN-34d" id="Dtd-xN-AOw">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pj9-mD-P5g">
+                                                    <rect key="frame" x="15" y="15" width="100" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="u9e-e3-jar"/>
+                                                        <constraint firstAttribute="height" constant="60" id="vFT-I0-Bah"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="申请人数：3000人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YZ-Xk-97B">
+                                                    <rect key="frame" x="123" y="60" width="103" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="JXJ-BB-O0L"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="青年首选" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8p-xN-HT5">
+                                                    <rect key="frame" x="123" y="37" width="48" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="招商young信用卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzx-Z3-j41">
+                                                    <rect key="frame" x="123" y="15" width="110" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4YZ-Xk-97B" firstAttribute="bottom" secondItem="pj9-mD-P5g" secondAttribute="bottom" id="Ddj-fn-h42"/>
+                                                <constraint firstItem="j8p-xN-HT5" firstAttribute="centerY" secondItem="pj9-mD-P5g" secondAttribute="centerY" id="Gc1-hW-Hcj"/>
+                                                <constraint firstItem="pj9-mD-P5g" firstAttribute="leading" secondItem="Dtd-xN-AOw" secondAttribute="leading" constant="15" id="NJr-1N-AA1"/>
+                                                <constraint firstItem="yzx-Z3-j41" firstAttribute="leading" secondItem="pj9-mD-P5g" secondAttribute="trailing" constant="8" id="dEc-zP-Wuc"/>
+                                                <constraint firstItem="pj9-mD-P5g" firstAttribute="centerY" secondItem="Dtd-xN-AOw" secondAttribute="centerY" id="eG5-ab-dRs"/>
+                                                <constraint firstItem="yzx-Z3-j41" firstAttribute="top" secondItem="Dtd-xN-AOw" secondAttribute="top" constant="15" id="fVE-xE-n1O"/>
+                                                <constraint firstItem="4YZ-Xk-97B" firstAttribute="leading" secondItem="pj9-mD-P5g" secondAttribute="trailing" constant="8" id="oYW-uI-CLW"/>
+                                                <constraint firstItem="j8p-xN-HT5" firstAttribute="leading" secondItem="yzx-Z3-j41" secondAttribute="leading" id="xGW-t1-eJh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="applyNum" destination="4YZ-Xk-97B" id="hUz-g7-NcG"/>
+                                            <outlet property="img" destination="pj9-mD-P5g" id="b82-nA-UBO"/>
+                                            <outlet property="name" destination="yzx-Z3-j41" id="I0t-De-2SX"/>
+                                            <outlet property="tip" destination="j8p-xN-HT5" id="Aki-bw-aMg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -323,7 +369,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" id="0yT-LV-3IG"/>
-                    <navigationItem key="navigationItem" title="91极速贷" id="avu-4s-W8b"/>
+                    <navigationItem key="navigationItem" id="avu-4s-W8b"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1068"/>
                     <connections>
@@ -559,12 +605,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商务合作请加微信：zy81319" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ww3-Xe-uG0">
+                                <rect key="frame" x="71" y="271" width="180" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.2784313725" green="0.28627450980000002" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yhH-A7-BSv" firstAttribute="centerX" secondItem="hQO-mh-8Fo" secondAttribute="centerX" id="9Aa-7b-uAA"/>
+                            <constraint firstItem="Ww3-Xe-uG0" firstAttribute="centerX" secondItem="AqL-b5-9xM" secondAttribute="centerX" id="e3k-Tc-bit"/>
                             <constraint firstItem="yhH-A7-BSv" firstAttribute="centerX" secondItem="NyU-z0-3ee" secondAttribute="centerX" id="eNp-tN-JYk"/>
                             <constraint firstItem="NyU-z0-3ee" firstAttribute="top" secondItem="CaR-zj-SzX" secondAttribute="bottom" constant="63" id="gev-TG-r3L"/>
+                            <constraint firstItem="Ww3-Xe-uG0" firstAttribute="top" secondItem="AqL-b5-9xM" secondAttribute="bottom" constant="8" id="hAe-1e-zQk"/>
                             <constraint firstItem="NyU-z0-3ee" firstAttribute="centerX" secondItem="hQO-mh-8Fo" secondAttribute="centerX" id="hdJ-76-lve"/>
                             <constraint firstItem="AqL-b5-9xM" firstAttribute="centerX" secondItem="hQO-mh-8Fo" secondAttribute="centerX" id="jc9-sr-Gwk"/>
                             <constraint firstItem="yhH-A7-BSv" firstAttribute="top" secondItem="NyU-z0-3ee" secondAttribute="bottom" constant="24" id="qcr-LU-mPV"/>

@@ -14,6 +14,8 @@
 #import "JCCBaseWebViewController.h"
 #import "ShanYinViewController.h"
 #import <BmobSDK/BmobQuery.h>
+#import "CreditManagerViewController.h"
+#import "MJRefresh.h"
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate,ImagePlayerViewDelegate>
 @property (weak, nonatomic) IBOutlet ImagePlayerView *adImagePlayerView;
@@ -38,23 +40,50 @@
     self.tableView.separatorColor = LineColor;
     
     self.ads = @[@"banner1",@"banner2",@"banner3"];
-    self.topArray = @[@{@"icon":@"xedk",@"title":@"小额贷款",@"des":@"上班族学生"},@{@"icon":@"dedk",@"title":@"大额贷款",@"des":@"企业房车贷"},@{@"icon":@"xyk",@"title":@"信用卡",@"des":@"省心省力"},@{@"icon":@"xindaijingli",@"title":@"信贷经理",@"des":@"入驻抢单"}];
+    self.topArray = @[@{@"icon":@"xedk",@"title":@"小额贷款",@"des":@"上班族学生",@"lable":@"秒批"},@{@"icon":@"dedk",@"title":@"大额贷款",@"des":@"企业房车贷",@"lable":@"推荐"},@{@"icon":@"xyk",@"title":@"信用卡",@"des":@"省心省力",@"lable":@""},@{@"icon":@"xindaijingli",@"title":@"信贷经理",@"des":@"入驻抢单",@"lable":@""}];
     [_adImagePlayerView initWithCount:3 delegate:self];
 
+    [self updateData];
     
-    [[HTTPRequestManager manager] POST:@"HotLoan" dictionary:@{} success:^(id responseObject) {
-        self.hotLoanArray = responseObject;
-        [self.tableView reloadData];
-    } failure:^(NSError *error) {
-        
-    } view:self.view progress:YES];
-    
+    WEAKSELF;
+    self.tableView.mj_header =  [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
+        STRONGSELF;
+        [strongSelf updateData];
+    }];
+
     // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)updateData {
+    [[HTTPRequestManager manager] POST:@"HotLoan" dictionary:@{} success:^(id responseObject) {
+        self.hotLoanArray = responseObject;
+        [self.tableView reloadData];
+        if ([self.tableView.mj_header isRefreshing]) {
+            [self.tableView.mj_header endRefreshing];
+        }
+    } failure:^(NSError *error) {
+        if ([self.tableView.mj_header isRefreshing]) {
+            [self.tableView.mj_header endRefreshing];
+        }
+    } view:self.view progress:YES];
+    
+    [[HTTPRequestManager manager] POST:@"HotCredit" dictionary:@{} success:^(id responseObject) {
+        self.hotCreditArray = responseObject;
+        [self.tableView reloadData];
+        if ([self.tableView.mj_header isRefreshing]) {
+            [self.tableView.mj_header endRefreshing];
+        }
+    } failure:^(NSError *error) {
+        if ([self.tableView.mj_header isRefreshing]) {
+            [self.tableView.mj_header endRefreshing];
+        }
+    } view:self.view progress:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,7 +102,7 @@
     }else if(section == 1) {
         return self.hotLoanArray.count + 1;
     }else if(section == 2) {
-        return 3;
+        return self.hotCreditArray.count + 1;
     }
     return 0;
 }
@@ -86,6 +115,7 @@
         WEAKSELF;
         cell.tapBlock = ^(NSInteger index) {
             STRONGSELF;
+            [strongSelf enterWebView:index];
         };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
@@ -104,6 +134,7 @@
             return cell;
         }else {
             HotCreditTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell5"];
+            cell.object = self.hotCreditArray[indexPath.row - 1];
             return cell;
         }
     }
@@ -122,7 +153,7 @@
         if (indexPath.row == 0) {
             return 40.f;
         }
-        return 70.f;
+        return 90.f;
     }
     return 0;
 }
@@ -135,6 +166,22 @@
     return CGFLOAT_MIN;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 1 && indexPath.row != 0) {
+        ShanYinViewController *web = [[ShanYinViewController alloc] init];
+        web.url = [[((BmobObject*)self.hotLoanArray[indexPath.row-1]) objectForKey:@"linkUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        web.title = [((BmobObject*)self.hotLoanArray[indexPath.row-1]) objectForKey:@"name"];
+        web.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:web animated:YES];
+    }else if (indexPath.section == 2 && indexPath.row != 0) {
+        [MobClick event:@"hotCredit" attributes:@{@"name":[((BmobObject*)self.hotCreditArray[indexPath.row-1]) objectForKey:@"name"]}];
+        JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
+        web.hidesBottomBarWhenPushed = YES;
+        web.url = [[((BmobObject*)self.hotCreditArray[indexPath.row-1]) objectForKey:@"linkUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [self.navigationController pushViewController:web animated:YES];
+    }
+}
 
 #pragma mark -
 - (void)imagePlayerView:(ImagePlayerView *)imagePlayerView loadImageForImageView:(UIImageView *)imageView index:(NSInteger)index {
@@ -154,7 +201,7 @@
         ShanYinViewController *web = [[ShanYinViewController alloc] init];
         web.url = XinJinBUSURL1;
         web.title = @"现金巴士";
-         web.hidesBottomBarWhenPushed = YES;
+        web.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:web animated:YES];
     }else if(index == 2) {
         ShanYinViewController *web = [[ShanYinViewController alloc] init];
@@ -164,6 +211,40 @@
         [self.navigationController pushViewController:web animated:YES];
     }
 }
+
+
+- (void)enterWebView:(NSInteger)index {
+    if (index == 0) {
+        ShanYinViewController *web = [[ShanYinViewController alloc] init];
+        if (self.hotLoanArray.count > 0) {
+            web.url =  [[((BmobObject*)self.hotLoanArray[0]) objectForKey:@"linkUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            web.title = [((BmobObject*)self.hotLoanArray[0]) objectForKey:@"name"];
+        }else {
+            web.url = ShanYinURL;
+            web.title = @"闪银";
+        }
+        web.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:web animated:YES];
+    }else if (index == 1) {
+        JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
+        web.hidesBottomBarWhenPushed = YES;
+        web.url = HaoDaiLoanURL;
+        [self.navigationController pushViewController:web animated:YES];
+    }else if (index == 2) {
+        JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
+        web.hidesBottomBarWhenPushed = YES;
+        web.url = HaoDaiCreditURL;
+        [self.navigationController pushViewController:web animated:YES];
+    }else if (index == 3) {
+        [MobClick event:@"CreditManager"];
+        CreditManagerViewController *web = [[CreditManagerViewController alloc] init];
+        web.url = XingDaiManagerURL;
+        web.hidesBottomBarWhenPushed = YES;
+        web.title = @"信贷经理入驻";
+        [self.navigationController pushViewController:web animated:YES];
+    }
+}
+
 
 /*
 #pragma mark - Navigation

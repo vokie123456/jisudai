@@ -10,4 +10,5 @@
 
 @interface ShanYinViewController : UIViewController
 @property (nonatomic, strong) NSString *url;
+
 @end

@@ -62,7 +62,6 @@
             _mast.hidden = YES;
             [_webView.scrollView addSubview:_mast];
         }
-
         
         if (![html hasPrefix:@"http://www.91jisudai.com/"]) {
             UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
@@ -72,7 +71,7 @@
             if ([html hasPrefix:@"http://www.kuaicha.info"]) {
                 nav.text = @"征信查询";
             }else if([html hasPrefix:@"http://interface.api.haodai.com"]){
-                nav.text = @"申请贷款";
+                nav.text = @"大额贷款";
             }else {
                 nav.text = @"申请信用卡";
                 nav.frame = CGRectMake(0, 0, self.frame.size.width, 44);

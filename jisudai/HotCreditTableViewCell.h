@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HotCreditTableViewCell : UITableViewCell
+@property (nonatomic, strong) BmobObject *object;
 
 @end

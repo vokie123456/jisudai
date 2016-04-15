@@ -22,7 +22,7 @@
 #define MD5KEY @"23SDfds13t23dVVadBYfsDF35453FID1"
 
 //App Id、下载地址、评价地址
-#define mAppId      @"1100573907"
+#define mAppId      @"1094308710"
 #define mAppUpdate    [NSString stringWithFormat:@"http://itunes.apple.com/lookup?id=%@", mAppId]
 #define mAppUrl       [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=%@",mAppId]
 #define mRateUrl      [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",mAppId]

@@ -7,8 +7,9 @@
 //
 
 #import "ShanYinViewController.h"
+#import "WXApi.h"
 
-@interface ShanYinViewController ()<UIWebViewDelegate>
+@interface ShanYinViewController ()<UIWebViewDelegate,UIAlertViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
 @end
 
@@ -22,6 +23,13 @@
     _webView.delegate = self;
     [self.view addSubview:_webView];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+    
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(share)];
+    [rightButton setTintColor:[UIColor whiteColor]];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
+    [MobClick event:@"hotLoan" attributes:@{@"name":self.title}];
     // Do any additional setup after loading the view.
 }
 
@@ -76,6 +84,55 @@
     }
     return YES;
 }
+
+
+- (void)share {
+    if ([WXApi isWXAppInstalled]) {
+        UIAlertView *alertView = [[UIAlertView alloc] init];
+        [alertView addButtonWithTitle:@"微信好友"];
+        [alertView addButtonWithTitle:@"朋友圈"];
+        [alertView addButtonWithTitle:@"取消"];
+        alertView.delegate = self;
+        [alertView show];
+    }
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        [MobClick event:@"shareFriend"];
+        WXWebpageObject *ext = [WXWebpageObject object];
+        ext.webpageUrl = self.url;
+        WXMediaMessage *message = [WXMediaMessage message];
+        message.title = @"91极速贷";
+        message.description = @"快速申请小额贷款,20分钟到账，亿万年轻人的选择";
+        message.mediaObject = ext;
+        [message setThumbImage:[UIImage imageNamed:@"logo"]];
+        
+        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+        req.message = message;
+        req.scene = 0;
+        [WXApi sendReq:req];
+        
+    }else if(buttonIndex == 1) {
+        [MobClick event:@"shareFriendCicle"];
+        WXWebpageObject *ext = [WXWebpageObject object];
+        ext.webpageUrl = self.url;
+        WXMediaMessage *message = [WXMediaMessage message];
+        message.title = @"91极速贷";
+        message.description = @"快速申请小额贷款,20分钟到账，亿万年轻人的选";
+        message.mediaObject = ext;
+        [message setThumbImage:[UIImage imageNamed:@"logo"]];
+        
+        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+        req.message = message;
+        req.scene = 1;
+        
+        [WXApi sendReq:req];
+        
+    }
+}
+
 
 /*
 #pragma mark - Navigation

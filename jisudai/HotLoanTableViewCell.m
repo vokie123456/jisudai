@@ -32,8 +32,15 @@
     _dic = dic;
     [_img sd_setImageWithURL:[NSURL URLWithString:[[dic objectForKey:@"imgUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
     _name.text = [dic objectForKey:@"name"];
-    _num.text = [NSString stringWithFormat:@"申请人数：%@人",[dic objectForKey:@"applyNum"]];
-    _rate.text = [dic objectForKey:@"rate"];
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"人申请数：%@人",[dic objectForKey:@"applyNum"]]];
+    NSRange range = [[NSString stringWithFormat:@"人申请数：%@人",[dic objectForKey:@"applyNum"]] rangeOfString:[NSString stringWithFormat:@"%@人",[dic objectForKey:@"applyNum"]]];
+    [string addAttribute:NSForegroundColorAttributeName  value:[UIColor colorWithHexColorString:@"f7636e"] range:range];
+    _num.attributedText = string;
+    
+    NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"月利率：%@",[dic objectForKey:@"rate"]]];
+    NSRange range1 = [[NSString stringWithFormat:@"月利率：%@",[dic objectForKey:@"rate"]] rangeOfString:[NSString stringWithFormat:@"%@",[dic objectForKey:@"rate"]]];
+    [string1 addAttribute:NSForegroundColorAttributeName  value:[UIColor colorWithHexColorString:@"f7636e"] range:range1];
+    _rate.attributedText = string1;
 }
 
 @end

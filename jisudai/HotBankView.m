@@ -26,14 +26,14 @@
     _bankIcon.image = [UIImage imageNamed:[dic objectForKey:@"icon"]];
     _bankName.text = [dic objectForKey:@"title"];
     _applyNum.text = [dic objectForKey:@"des"];
-//    if ([bank.label isEqualToString:@""]) {
-//        _lableContent.hidden = YES;
-//        _lableImg.hidden = YES;
-//    }else {
-//        _lableImg.hidden = NO;
-//        _lableContent.hidden = NO;
-//        _lableContent.text = bank.label;
-//    }
+    if ([[dic objectForKey:@"lable"] isEqualToString:@""]) {
+        _lableContent.hidden = YES;
+        _lableImg.hidden = YES;
+    }else {
+        _lableImg.hidden = NO;
+        _lableContent.hidden = NO;
+        _lableContent.text = [dic objectForKey:@"lable"];
+    }
 }
 
 
