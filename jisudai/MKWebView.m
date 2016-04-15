@@ -56,6 +56,15 @@
                         nav.text = @"浦发银行";
                     }
                 }
+                
+            }else if ([html hasPrefix:@"http://www.91jisudai.com/Mobile/creditapply"]) {
+                UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
+                nav.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
+                nav.textAlignment = NSTextAlignmentCenter;
+                nav.textColor = [UIColor whiteColor];
+                nav.font = [UIFont systemFontOfSize:18];
+                nav.text = @"申请信用卡";
+                [_webView.scrollView addSubview:nav];
             }
             _mast = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width - 80, 0, 80, 44)];
             _mast.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
