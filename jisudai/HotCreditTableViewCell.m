@@ -37,8 +37,8 @@
     [_img sd_setImageWithURL:[NSURL URLWithString:[[object objectForKey:@"imgUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
     _name.text = [object objectForKey:@"name"];
     _tip.text = [object objectForKey:@"des"];
-    NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"申请人数：%@",[object objectForKey:@"applyNum"]]];
-    NSRange range1 = [[NSString stringWithFormat:@"申请人数：%@",[object objectForKey:@"applyNum"]] rangeOfString:[NSString stringWithFormat:@"%@",[object objectForKey:@"applyNum"]]];
+    NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"申请人数：%@人",[object objectForKey:@"applyNum"]]];
+    NSRange range1 = [[NSString stringWithFormat:@"申请人数：%@人",[object objectForKey:@"applyNum"]] rangeOfString:[NSString stringWithFormat:@"%@人",[object objectForKey:@"applyNum"]]];
     [string1 addAttribute:NSForegroundColorAttributeName  value:[UIColor colorWithHexColorString:@"f7636e"] range:range1];
     _applyNum.attributedText = string1;
 }
