@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186CF3E61CD3245800CF612B /* LoanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF3E51CD3245700CF612B /* LoanDetailViewController.m */; };
+		186CF3E91CD324A200CF612B /* LoanDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF3E81CD324A200CF612B /* LoanDetailTableViewCell.m */; };
+		186CF3EC1CD32E4F00CF612B /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF3EB1CD32E4F00CF612B /* LineView.m */; };
+		186CF3FD1CD33C7500CF612B /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF3FC1CD33C7500CF612B /* CommentTableViewCell.m */; };
+		186CF4021CD34D9A00CF612B /* ASPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF3FF1CD34D9A00CF612B /* ASPopUpView.m */; };
+		186CF4031CD34D9A00CF612B /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF4011CD34D9A00CF612B /* ASProgressPopUpView.m */; };
+		186CF4061CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF4051CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.m */; };
+		186CF4091CD368B000CF612B /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF4081CD368B000CF612B /* CommentViewController.m */; };
 		18DA9F911CBFDD920087E2E6 /* HTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA9F901CBFDD920087E2E6 /* HTTPRequestManager.m */; };
+		18DA9F941CC10A1A0087E2E6 /* LoanProgressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA9F931CC10A1A0087E2E6 /* LoanProgressTableViewController.m */; };
 		1F7FF2B772D5573A48E68B20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFF7A3F2BF16D036C8E217C /* libPods.a */; };
 		AE19DA901CBF38AD00E601E5 /* WEHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DA8C1CBF38AD00E601E5 /* WEHelper.m */; };
 		AE19DA911CBF38AD00E601E5 /* AppFun.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DA8F1CBF38AD00E601E5 /* AppFun.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -18,7 +27,6 @@
 		AE19DAA61CBF401000E601E5 /* HotBankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE19DAA41CBF401000E601E5 /* HotBankView.xib */; };
 		AE19DAAA1CBF4D5500E601E5 /* HotLoanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAA91CBF4D5500E601E5 /* HotLoanTableViewCell.m */; };
 		AE19DAAD1CBF4D6800E601E5 /* HotCreditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */; };
-		AE19DAB01CBF9F8100E601E5 /* ShanYinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAAF1CBF9F8100E601E5 /* ShanYinViewController.m */; };
 		AE19DAB21CC0C9C400E601E5 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19DAB11CC0C9C400E601E5 /* share.png */; };
 		AE7A01091C9675A60058045F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01081C9675A60058045F /* main.m */; };
 		AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A010B1C9675A60058045F /* AppDelegate.m */; };
@@ -51,7 +59,6 @@
 		AEE8BEF41CAE570C00064618 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF31CAE570C00064618 /* UITextView+Placeholder.m */; };
 		AEE8BEF71CAE571B00064618 /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEF61CAE571B00064618 /* ZYTextField.m */; };
 		AEE8BEFC1CAE5B6000064618 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BEFB1CAE5B6000064618 /* UIViewExt.m */; };
-		AEE8BEFE1CAE615500064618 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE8BEFD1CAE615500064618 /* logo.png */; };
 		AEE8BF021CAE61CD00064618 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE8BF011CAE61CD00064618 /* AboutUsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -73,8 +80,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		186CF3E41CD3245700CF612B /* LoanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanDetailViewController.h; sourceTree = "<group>"; };
+		186CF3E51CD3245700CF612B /* LoanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDetailViewController.m; sourceTree = "<group>"; };
+		186CF3E71CD324A200CF612B /* LoanDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanDetailTableViewCell.h; sourceTree = "<group>"; };
+		186CF3E81CD324A200CF612B /* LoanDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDetailTableViewCell.m; sourceTree = "<group>"; };
+		186CF3EA1CD32E4F00CF612B /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
+		186CF3EB1CD32E4F00CF612B /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
+		186CF3FB1CD33C7500CF612B /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		186CF3FC1CD33C7500CF612B /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		186CF3FE1CD34D9A00CF612B /* ASPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopUpView.h; sourceTree = "<group>"; };
+		186CF3FF1CD34D9A00CF612B /* ASPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopUpView.m; sourceTree = "<group>"; };
+		186CF4001CD34D9A00CF612B /* ASProgressPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASProgressPopUpView.h; sourceTree = "<group>"; };
+		186CF4011CD34D9A00CF612B /* ASProgressPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASProgressPopUpView.m; sourceTree = "<group>"; };
+		186CF4041CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		186CF4051CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		186CF4071CD368B000CF612B /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		186CF4081CD368B000CF612B /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 		18DA9F8F1CBFDD920087E2E6 /* HTTPRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequestManager.h; sourceTree = "<group>"; };
 		18DA9F901CBFDD920087E2E6 /* HTTPRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequestManager.m; sourceTree = "<group>"; };
+		18DA9F921CC10A1A0087E2E6 /* LoanProgressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanProgressTableViewController.h; sourceTree = "<group>"; };
+		18DA9F931CC10A1A0087E2E6 /* LoanProgressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanProgressTableViewController.m; sourceTree = "<group>"; };
 		A1E92D080D59A954FB1AF1F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AE19DA8B1CBF38AD00E601E5 /* WEHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEHelper.h; sourceTree = "<group>"; };
 		AE19DA8C1CBF38AD00E601E5 /* WEHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEHelper.m; sourceTree = "<group>"; };
@@ -96,8 +121,6 @@
 		AE19DAA91CBF4D5500E601E5 /* HotLoanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotLoanTableViewCell.m; sourceTree = "<group>"; };
 		AE19DAAB1CBF4D6800E601E5 /* HotCreditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCreditTableViewCell.h; sourceTree = "<group>"; };
 		AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCreditTableViewCell.m; sourceTree = "<group>"; };
-		AE19DAAE1CBF9F8100E601E5 /* ShanYinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShanYinViewController.h; sourceTree = "<group>"; };
-		AE19DAAF1CBF9F8100E601E5 /* ShanYinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShanYinViewController.m; sourceTree = "<group>"; };
 		AE19DAB11CC0C9C400E601E5 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		AE7A01041C9675A60058045F /* jisudai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jisudai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7A01081C9675A60058045F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,7 +180,6 @@
 		AEE8BEF91CAE574B00064618 /* JCCDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCDefine.h; sourceTree = "<group>"; };
 		AEE8BEFA1CAE5B6000064618 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
 		AEE8BEFB1CAE5B6000064618 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
-		AEE8BEFD1CAE615500064618 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		AEE8BF001CAE61CD00064618 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		AEE8BF011CAE61CD00064618 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		DDFF7A3F2BF16D036C8E217C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,8 +236,10 @@
 				AE19DA9E1CBF3E1000E601E5 /* Cell */,
 				AE7A01441C96AFBD0058045F /* MainViewController.h */,
 				AE7A01451C96AFBD0058045F /* MainViewController.m */,
-				AE19DAAE1CBF9F8100E601E5 /* ShanYinViewController.h */,
-				AE19DAAF1CBF9F8100E601E5 /* ShanYinViewController.m */,
+				186CF3E41CD3245700CF612B /* LoanDetailViewController.h */,
+				186CF3E51CD3245700CF612B /* LoanDetailViewController.m */,
+				186CF4071CD368B000CF612B /* CommentViewController.h */,
+				186CF4081CD368B000CF612B /* CommentViewController.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -249,6 +273,8 @@
 				AEE8BF011CAE61CD00064618 /* AboutUsViewController.m */,
 				AEE825CF1CBB71EA00690130 /* CreditManagerViewController.h */,
 				AEE825D01CBB71EA00690130 /* CreditManagerViewController.m */,
+				18DA9F921CC10A1A0087E2E6 /* LoanProgressTableViewController.h */,
+				18DA9F931CC10A1A0087E2E6 /* LoanProgressTableViewController.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -262,6 +288,10 @@
 				AE19DAA91CBF4D5500E601E5 /* HotLoanTableViewCell.m */,
 				AE19DAAB1CBF4D6800E601E5 /* HotCreditTableViewCell.h */,
 				AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */,
+				186CF3E71CD324A200CF612B /* LoanDetailTableViewCell.h */,
+				186CF3E81CD324A200CF612B /* LoanDetailTableViewCell.m */,
+				186CF3FB1CD33C7500CF612B /* CommentTableViewCell.h */,
+				186CF3FC1CD33C7500CF612B /* CommentTableViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -305,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				AE19DAB11CC0C9C400E601E5 /* share.png */,
-				AEE8BEFD1CAE615500064618 /* logo.png */,
 				AE7A010A1C9675A60058045F /* AppDelegate.h */,
 				AE7A010B1C9675A60058045F /* AppDelegate.m */,
 				AE7A01101C9675A60058045F /* Main.storyboard */,
@@ -362,6 +391,8 @@
 				AE7A01411C96AF200058045F /* MKWebView.m */,
 				AE19DA961CBF3AA700E601E5 /* ImagePlayerView.h */,
 				AE19DA971CBF3AA700E601E5 /* ImagePlayerView.m */,
+				186CF3EA1CD32E4F00CF612B /* LineView.h */,
+				186CF3EB1CD32E4F00CF612B /* LineView.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -415,6 +446,12 @@
 		AEE825B31CB763F600690130 /* ThreePublic */ = {
 			isa = PBXGroup;
 			children = (
+				186CF4041CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.h */,
+				186CF4051CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.m */,
+				186CF3FE1CD34D9A00CF612B /* ASPopUpView.h */,
+				186CF3FF1CD34D9A00CF612B /* ASPopUpView.m */,
+				186CF4001CD34D9A00CF612B /* ASProgressPopUpView.h */,
+				186CF4011CD34D9A00CF612B /* ASProgressPopUpView.m */,
 				AE19DA931CBF397200E601E5 /* Reachability.h */,
 				AE19DA941CBF397200E601E5 /* Reachability.m */,
 				AEE825AB1CB763E100690130 /* WeiXing */,
@@ -508,7 +545,7 @@
 				TargetAttributes = {
 					AE7A01031C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3YR7CL6SMV;
+						DevelopmentTeam = X92C369FEQ;
 					};
 					AE7A011C1C9675A60058045F = {
 						CreatedOnToolsVersion = 7.2;
@@ -547,7 +584,6 @@
 			files = (
 				AE7A01171C9675A60058045F /* LaunchScreen.storyboard in Resources */,
 				AE7A01141C9675A60058045F /* Assets.xcassets in Resources */,
-				AEE8BEFE1CAE615500064618 /* logo.png in Resources */,
 				AE7A01121C9675A60058045F /* Main.storyboard in Resources */,
 				AE19DAA61CBF401000E601E5 /* HotBankView.xib in Resources */,
 				AE19DAB21CC0C9C400E601E5 /* share.png in Resources */,
@@ -632,24 +668,32 @@
 				AE7A01091C9675A60058045F /* main.m in Sources */,
 				AE19DAAA1CBF4D5500E601E5 /* HotLoanTableViewCell.m in Sources */,
 				AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */,
+				186CF3EC1CD32E4F00CF612B /* LineView.m in Sources */,
+				186CF4061CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				AE19DAAD1CBF4D6800E601E5 /* HotCreditTableViewCell.m in Sources */,
+				186CF3E91CD324A200CF612B /* LoanDetailTableViewCell.m in Sources */,
+				186CF4091CD368B000CF612B /* CommentViewController.m in Sources */,
 				AE7A01561C96C4EF0058045F /* UIColor+Extend.m in Sources */,
 				AEE825D11CBB71EA00690130 /* CreditManagerViewController.m in Sources */,
 				18DA9F911CBFDD920087E2E6 /* HTTPRequestManager.m in Sources */,
 				AE19DA981CBF3AA700E601E5 /* ImagePlayerView.m in Sources */,
 				AE19DAA51CBF401000E601E5 /* HotBankView.m in Sources */,
 				AE19DA911CBF38AD00E601E5 /* AppFun.m in Sources */,
+				186CF3FD1CD33C7500CF612B /* CommentTableViewCell.m in Sources */,
+				186CF3E61CD3245800CF612B /* LoanDetailViewController.m in Sources */,
 				AEE8BF021CAE61CD00064618 /* AboutUsViewController.m in Sources */,
 				AEE8BEF11CAE56B000064618 /* FeedBackViewController.m in Sources */,
 				AE7A01531C96C4D30058045F /* ZYTabViewController.m in Sources */,
 				AE7A01461C96AFBD0058045F /* MainViewController.m in Sources */,
+				18DA9F941CC10A1A0087E2E6 /* LoanProgressTableViewController.m in Sources */,
 				AE19DA951CBF397200E601E5 /* Reachability.m in Sources */,
 				AE7A01421C96AF200058045F /* MKWebView.m in Sources */,
 				AE7A014D1C96B00F0058045F /* CreditCardViewController.m in Sources */,
 				AE7CFB4F1CACCF36003EC1CF /* UserViewController.m in Sources */,
-				AE19DAB01CBF9F8100E601E5 /* ShanYinViewController.m in Sources */,
+				186CF4021CD34D9A00CF612B /* ASPopUpView.m in Sources */,
 				AEE8BEF41CAE570C00064618 /* UITextView+Placeholder.m in Sources */,
 				AE19DAA11CBF3E3100E601E5 /* HomeTableViewCell.m in Sources */,
+				186CF4031CD34D9A00CF612B /* ASProgressPopUpView.m in Sources */,
 				AE19DA901CBF38AD00E601E5 /* WEHelper.m in Sources */,
 				AEE8BEFC1CAE5B6000064618 /* UIViewExt.m in Sources */,
 			);
@@ -794,8 +838,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/jisudai-PrefixHeader.pch";
 				INFOPLIST_FILE = jisudai/Info.plist;
@@ -808,8 +852,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "5ba521f1-d22e-40f2-944a-f1f08fb8022e";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -821,8 +865,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/jisudai-PrefixHeader.pch";
 				INFOPLIST_FILE = jisudai/Info.plist;
@@ -835,8 +879,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "5ba521f1-d22e-40f2-944a-f1f08fb8022e";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

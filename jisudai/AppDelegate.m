@@ -21,12 +21,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [MobClick startWithAppkey:@"56e92d93e0f55aee7f000e98" reportPolicy:SEND_INTERVAL   channelId:@"AppStore"];
-    [Bmob  registerWithAppKey:@"3f203200a048b7d693db5070ed1998f8"];
+    
+    
+    [MobClick startWithAppkey:YouMeng_Key reportPolicy:SEND_INTERVAL   channelId:@"AppStore"];
+    [Bmob  registerWithAppKey:BmobApplicationID];
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
         UIMutableUserNotificationCategory *categorys = [[UIMutableUserNotificationCategory alloc]init];
         //注意：此处的Bundle ID要与你申请证书时填写的一致。
-        categorys.identifier=@"com.xiaoya.jisudai";
+        categorys.identifier = APP_BundleID;
         UIUserNotificationSettings *userNotifiSetting = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound) categories:[NSSet setWithObjects:categorys,nil]];
         
         [[UIApplication sharedApplication] registerUserNotificationSettings:userNotifiSetting];
@@ -37,7 +39,7 @@
         UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound;
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
     }
-    [WXApi registerApp:@"wx164fc6d2eb2ea1d6"];
+    [WXApi registerApp:WEIXING_KEY];
     return YES;
 }
 

@@ -80,7 +80,7 @@
             if ([html hasPrefix:@"http://www.kuaicha.info"]) {
                 nav.text = @"征信查询";
             }else if([html hasPrefix:@"http://interface.api.haodai.com"]){
-                nav.text = @"大额贷款";
+                nav.text = @"大额贷款(1万以上)";
             }else {
                 nav.text = @"申请信用卡";
                 nav.frame = CGRectMake(0, 0, self.frame.size.width, 44);
@@ -96,7 +96,7 @@
             
         }else if (_type == 1) {
             _back = [UIButton buttonWithType:UIButtonTypeCustom];
-            _back.frame = CGRectMake(0, 0, 100, 44);
+            _back.frame = CGRectMake(0, 0, 80, 44);
             _back.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
             _back.hidden = YES;
             [_webView.scrollView addSubview:_back];

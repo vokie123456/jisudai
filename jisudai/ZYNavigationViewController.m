@@ -55,6 +55,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 /*
 #pragma mark - Navigation
 

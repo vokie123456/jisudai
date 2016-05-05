@@ -12,11 +12,10 @@
 #import "HotCreditTableViewCell.h"
 #import "HotLoanTableViewCell.h"
 #import "JCCBaseWebViewController.h"
-#import "ShanYinViewController.h"
 #import <BmobSDK/BmobQuery.h>
 #import "CreditManagerViewController.h"
 #import "MJRefresh.h"
-
+#import "LoanDetailViewController.h"
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate,ImagePlayerViewDelegate>
 @property (weak, nonatomic) IBOutlet ImagePlayerView *adImagePlayerView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -38,7 +37,10 @@
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.backgroundColor = BackgroundColor;
     self.tableView.separatorColor = LineColor;
-    
+    self.adImagePlayerView.width = SCREEN_WIDTH;
+    if (mIsPad) {
+        self.adImagePlayerView.height = 330.f;
+    }
     self.ads = @[@"banner1",@"banner2",@"banner3"];
     self.topArray = @[@{@"icon":@"xedk",@"title":@"小额贷款",@"des":@"上班族学生",@"lable":@"秒批"},@{@"icon":@"dedk",@"title":@"大额贷款",@"des":@"企业房车贷",@"lable":@"推荐"},@{@"icon":@"xyk",@"title":@"信用卡",@"des":@"省心省力",@"lable":@""},@{@"icon":@"xindaijingli",@"title":@"信贷经理",@"des":@"入驻抢单",@"lable":@""}];
     [_adImagePlayerView initWithCount:3 delegate:self];
@@ -60,8 +62,10 @@
     [self.navigationController setNavigationBarHidden:YES];
 }
 
+
+
 - (void)updateData {
-    [[HTTPRequestManager manager] POST:@"HotLoan" dictionary:@{} success:^(id responseObject) {
+    [[HTTPRequestManager manager] POST:@"HotLLoan1" dictionary:@{} page:1 success:^(id responseObject) {
         self.hotLoanArray = responseObject;
         [self.tableView reloadData];
         if ([self.tableView.mj_header isRefreshing]) {
@@ -73,7 +77,7 @@
         }
     } view:self.view progress:YES];
     
-    [[HTTPRequestManager manager] POST:@"HotCredit" dictionary:@{} success:^(id responseObject) {
+    [[HTTPRequestManager manager] POST:@"HotCredit" dictionary:@{} page:1 success:^(id responseObject) {
         self.hotCreditArray = responseObject;
         [self.tableView reloadData];
         if ([self.tableView.mj_header isRefreshing]) {
@@ -169,11 +173,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 1 && indexPath.row != 0) {
-        ShanYinViewController *web = [[ShanYinViewController alloc] init];
-        web.url = [[((BmobObject*)self.hotLoanArray[indexPath.row-1]) objectForKey:@"linkUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        web.title = [((BmobObject*)self.hotLoanArray[indexPath.row-1]) objectForKey:@"name"];
-        web.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:web animated:YES];
+        LoanDetailViewController *detail = StoryBoardDefined(@"LoanDetailViewController");
+        detail.hidesBottomBarWhenPushed = YES;
+        detail.object = self.hotLoanArray[indexPath.row - 1];
+        [self.navigationController pushViewController:detail animated:YES];
     }else if (indexPath.section == 2 && indexPath.row != 0) {
         [MobClick event:@"hotCredit" attributes:@{@"name":[((BmobObject*)self.hotCreditArray[indexPath.row-1]) objectForKey:@"name"]}];
         JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
@@ -198,34 +201,24 @@
         web.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:web animated:YES];
     }else if(index == 1) {
-        ShanYinViewController *web = [[ShanYinViewController alloc] init];
-        web.url = XinJinBUSURL1;
-        web.title = @"现金巴士";
-        web.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:web animated:YES];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[XinJinBUSURL1 stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
     }else if(index == 2) {
-        ShanYinViewController *web = [[ShanYinViewController alloc] init];
-        web.url = ShanYinURL;
-        web.title = @"闪银";
-         web.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:web animated:YES];
+      [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[ShanYinURL stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
     }
 }
 
 
 - (void)enterWebView:(NSInteger)index {
+    if (self.hotLoanArray.count == 0) {
+        return;
+    }
     if (index == 0) {
-        ShanYinViewController *web = [[ShanYinViewController alloc] init];
-        if (self.hotLoanArray.count > 0) {
-            web.url =  [[((BmobObject*)self.hotLoanArray[0]) objectForKey:@"linkUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-            web.title = [((BmobObject*)self.hotLoanArray[0]) objectForKey:@"name"];
-        }else {
-            web.url = ShanYinURL;
-            web.title = @"闪银";
-        }
+        LoanDetailViewController *web = StoryBoardDefined(@"LoanDetailViewController");
+        web.object = self.hotLoanArray[0];
         web.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:web animated:YES];
     }else if (index == 1) {
+        [MobClick event:@"dedk"];
         JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
         web.hidesBottomBarWhenPushed = YES;
         web.url = HaoDaiLoanURL;
@@ -244,6 +237,15 @@
         [self.navigationController pushViewController:web animated:YES];
     }
 }
+
+
+- (BOOL)prefersStatusBarHidden
+{
+    // iOS7后,[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    // 已经不起作用了
+    return YES;
+}
+
 
 
 /*

@@ -39,7 +39,7 @@
     _tip.text = [object objectForKey:@"des"];
     NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"申请人数：%@人",[object objectForKey:@"applyNum"]]];
     NSRange range1 = [[NSString stringWithFormat:@"申请人数：%@人",[object objectForKey:@"applyNum"]] rangeOfString:[NSString stringWithFormat:@"%@人",[object objectForKey:@"applyNum"]]];
-    [string1 addAttribute:NSForegroundColorAttributeName  value:[UIColor colorWithHexColorString:@"f7636e"] range:range1];
+    [string1 addAttribute:NSForegroundColorAttributeName  value:[UIColor colorWithHexColorString:@"ff2050"] range:range1];
     _applyNum.attributedText = string1;
 }
 

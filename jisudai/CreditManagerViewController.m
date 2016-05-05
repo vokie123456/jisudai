@@ -22,9 +22,11 @@
     _webView.delegate = self;
     [self.view addSubview:_webView];
     if ([_url hasPrefix:@"http://91jisudai.com/Mobile/xdy"]) {
-        _webView.frame = CGRectMake(0, -54, self.view.frame.size.width, self.view.frame.size.height + 54);
+        _webView.frame = CGRectMake(0, -54, self.view.frame.size.width, self.view.frame.size.height);
     }else if ([_url isEqualToString:BanKaProgress]) {
-        _webView.height = _webView.height - 44;
+        _webView.height = _webView.height - 64;
+    }else if ([_url hasPrefix:@"http://91jisudai.com/Mobile/jsq"]) {
+        _webView.height = _webView.height - 64;
     }
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
     

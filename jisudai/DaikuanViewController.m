@@ -23,6 +23,7 @@
     //  那
     _loadFail = NO;
     self.view.backgroundColor = [UIColor whiteColor];
+    [MobClick event:@"dedk"];
     
     _webView = [[MKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 49) url:@"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0" type:@"1"];
     _webView.delegate = self;
@@ -64,6 +65,14 @@
 
 - (void)webHome:(NSString *)url {
     self.tabBarController.selectedIndex = 0;
+}
+
+
+- (BOOL)prefersStatusBarHidden
+{
+    // iOS7后,[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    // 已经不起作用了
+    return YES;
 }
 
 /*

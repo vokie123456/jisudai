@@ -9,7 +9,11 @@
 /*---------------------------------程序相关常数-------------------------------------*/
 #pragma mark - App 相关
 
-#define YouMeng_Key @"56fcb64667e58e7e670006b7"
+#define mAppId      @"1094308710"
+#define YouMeng_Key @"56e92d93e0f55aee7f000e98"
+#define BmobApplicationID @"3f203200a048b7d693db5070ed1998f8"
+#define APP_BundleID @"com.xiaoya.jisudai"
+#define WEIXING_KEY @"wx164fc6d2eb2ea1d6"
 
 //默认的设备did和key
 
@@ -22,7 +26,7 @@
 #define MD5KEY @"23SDfds13t23dVVadBYfsDF35453FID1"
 
 //App Id、下载地址、评价地址
-#define mAppId      @"1094308710"
+
 #define mAppUpdate    [NSString stringWithFormat:@"http://itunes.apple.com/lookup?id=%@", mAppId]
 #define mAppUrl       [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=%@",mAppId]
 #define mRateUrl      [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@",mAppId]
@@ -31,7 +35,7 @@
 #define mAppAddress  [NSString stringWithFormat:@"http://itunes.apple.com/cn/app/id%@",mAppId]
 
 //下载地址
-#define APPDownAddress @"https://itunes.apple.com/cn/app/91ji-su-dai-dai-kuanapp-shen/id1094308710?mt=8"
+#define APPDownAddress [NSString stringWithFormat:@"https://itunes.apple.com/cn/app/91ji-su-dai-dai-kuanapp-shen/id%@?mt=8",mAppId]
 
 /*----------------------------------方法相关宏定义------------------------------------*/
 #pragma mark -
