@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 feng jia. All rights reserved.
 //
 
-#define mCommonColor  [UIColor colorWithRed:224.0/255.0 green:158.0/255.0 blue:124.0/255.0 alpha:1.000] //#ff5d3b
+#define mCommonColor  [UIColor colorWithRed:255.0/255.0 green:132.0/255.0 blue:80.0/255.0 alpha:1.000] //#ff5d3b
 #define mBlueColor [UIColor colorWithHexColorString:@"00aaee"]
 
 // View 坐标(x,y)和宽高(width,height)

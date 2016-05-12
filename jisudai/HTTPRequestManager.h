@@ -15,6 +15,7 @@ extern  NSString *const HTTPConnectionError;
 + (instancetype)manager;
 - (void)POST:(NSString*)appendString
   dictionary:(NSDictionary*)parameters
+        page:(NSInteger)page
      success:(void (^)(id responseObject))success
      failure:(void (^)(NSError *error))failure
         view:(UIView*)view

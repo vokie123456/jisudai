@@ -15,6 +15,8 @@
 #define HaoDaiLoanURL @"http://interface.api.haodai.com/h5tuiguang/aff?ref=hd_11010999&sid=www.91jisudai.com&showhead=0"
 //信用卡
 #define HaoDaiCreditURL @"http://www.91jisudai.com/Mobile/creditcard/"
+//信用卡在线预约
+#define HaoDaiCreditZaiXianYuYue @"http://www.91jisudai.com/Mobile/credit"
 //信贷经理
 #define XingDaiManagerURL @"http://91jisudai.com/Mobile/xdy"
 //征信查询
@@ -29,6 +31,11 @@
 #define XinJinBUSURL2 @"https://weixin.cashbus.com/#/events/promo/5901"
 //马上金融
 #define MasShangJinRong @"http://c.msxf.com/91jisudai"
+//鼎及贷
+#define DingJiDai @"http://m.9263.com/active/register.html?channelCode=91jsd"
+
+//融360
+#define Rong360 @"http://m.rong360.com/express?from=sem21&utm_source=91jsd&utm_medium=cpa&utm_campaign=sem21"
 
 //办卡进度
 #define BanKaProgress @"http://8.yun.haodai.com/Public/progressinquiry"

@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
     self.tableView.separatorColor = [UIColor colorWithRed:224.f/255.f green:224.f/255.f blue:224.f/255.f alpha:1.0];
-    self.titles = [NSArray arrayWithObjects:@"办卡进度",@"征信查询",@"贷款计算器",@"分享给好友",@"意见反馈",@"给个好评",@"关于我们", nil];
+    self.titles = [NSArray arrayWithObjects:@"办卡进度",@"征信查询",@"贷款计算器",@"分享给好友",@"意见反馈",@"给个好评",@"联系我们", nil];
     self.icons = @[@"bankaProgress",@"zhengxin",@"jisuanqi",@"fenxiang",@"yijian",@"score",@"aboutUs"];
     // Do any additional setup after loading the view.
 }
@@ -148,6 +148,10 @@
     }
 }
 
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 /*
 #pragma mark - Navigation
 

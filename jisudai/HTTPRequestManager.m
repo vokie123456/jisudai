@@ -20,6 +20,7 @@ NSString *const HTTPConnectionError = @"网络连接失败";
 
 - (void)POST:(NSString*)appendString
   dictionary:(NSDictionary*)parameters
+        page:(NSInteger)page
      success:(void (^)(id responseObject))success
      failure:(void (^)(NSError *error))failure
         view:(UIView*)view
@@ -31,6 +32,12 @@ NSString *const HTTPConnectionError = @"网络连接失败";
     }
     hud.removeFromSuperViewOnHide = YES;
     BmobQuery *bquery = [BmobQuery queryWithClassName:appendString];
+    if (parameters.allKeys.count > 0) {
+        [bquery whereKey:parameters.allKeys.firstObject equalTo:[parameters objectForKey:parameters.allKeys.firstObject]];
+    }
+    [bquery orderByDescending:@"updatedAt"];
+    bquery.limit = 10;
+    bquery.skip = bquery.limit * (page - 1);
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         if (error) {
             hud.mode = MBProgressHUDModeText;
@@ -41,8 +48,10 @@ NSString *const HTTPConnectionError = @"网络连接失败";
             }
         }else {
             [hud hide:YES];
-            if (success) {
-                success(array);
+            if (array.count != 0) {
+                if (success) {
+                    success(array);
+                }
             }
         }
     }];

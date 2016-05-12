@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MKWebView.h"
 
-//#import "JCCBaseViewController.h"
+#import "JCCBaseViewController.h"
 typedef void (^BlockWebHome)(NSString*);
 typedef void (^BlockWebCredit)(NSString*);
 typedef void (^BlockBackHome)(void);
 
-@interface JCCBaseWebViewController : UIViewController
+@interface JCCBaseWebViewController : JCCBaseViewController
 @property (nonatomic,strong)NSString *url;
 @property (nonatomic,strong)NSString *webTitle;
 @property (nonatomic,assign)BOOL showShare;//是否需要分享
