@@ -171,13 +171,15 @@
     [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
     // Disable callout
     [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
-//  NSString *height_str= [webView stringByEvaluatingJavaScriptFromString: @"document.body.scrollHeight"];
+    
+//  NSString *height_str= [webView stringByEvaluatingJavaScriptFromString:@"document.body.scrollHeight"];
 //  CGFloat height = [height_str floatValue];
-//
+    
 //  NSLog(@"height: %@//%f", [webView stringByEvaluatingJavaScriptFromString: @"document.body.scrollHeight"],webView.scrollView.contentSize.height);
 //  if ([self.delegate respondsToSelector:@selector(MKWebViewFinishContentHeight:)]) {
 //      [self.delegate MKWebViewFinishContentHeight:height];
 //  }
+    
     [[webView viewWithTag:KTagActivitity] removeFromSuperview];
 }
 

@@ -57,7 +57,7 @@
     };
     web.webCredit = ^(NSString*url) {
         __strong __typeof(self) strongSelf = weak;
-        strongSelf.webView.isSelectedCity = NO;
+         strongSelf.webView.isSelectedCity = NO;
         [strongSelf.webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     };
     web.back = ^(){
