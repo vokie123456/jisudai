@@ -1102,7 +1102,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="90" height="90"/>
+        <image name="logo" width="150" height="150"/>
         <image name="my_default_head" width="68" height="68"/>
         <image name="xjbs" width="40" height="40"/>
     </resources>

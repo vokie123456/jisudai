@@ -27,6 +27,7 @@
     ViewBorderRadius(_content, 1, 1, LineColor);
 
     self.array = @[@"#被拒了#",@"#我批了#",@"#额度#",@"#放款速度#",@"#申请过程#",@"#催收还款#",@"#逾期#",@"#其他#"];
+        
     // Do any additional setup after loading the view.
 }
 
@@ -66,6 +67,9 @@
             //创建成功后会返回objectId，updatedAt，createdAt等信息
             //创建对象成功，打印对象值
             NSLog(@"%@",Comment);
+            if (self.block) {
+                self.block();
+            }
             [self.navigationController popViewControllerAnimated:YES];
             mAlertView(@"", @"感谢您的留言");
            

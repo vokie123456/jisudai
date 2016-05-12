@@ -14,6 +14,7 @@
 #define BmobApplicationID @"3f203200a048b7d693db5070ed1998f8"
 #define APP_BundleID @"com.xiaoya.jisudai"
 #define WEIXING_KEY @"wx164fc6d2eb2ea1d6"
+#define PAIPAIDAIKEY @"57ec11883efba6533fde86b8451260ff"
 
 //默认的设备did和key
 

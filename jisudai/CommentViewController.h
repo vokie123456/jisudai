@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JCCBaseViewController.h"
 
-@interface CommentViewController : UIViewController
+typedef void (^CommentBlock)(void);
+@interface CommentViewController : JCCBaseViewController
 @property (nonatomic,strong)NSString *hotLoanId;
+@property (nonatomic,copy)CommentBlock block;
+
 @end

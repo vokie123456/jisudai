@@ -38,23 +38,32 @@
         
         if (![html hasPrefix:@"http://www.91jisudai.com/Mobile/index"] && ![html hasPrefix:@"http://www.91jisudai.com/Mobile/creditcard"]) {
             if ([html hasPrefix:@"http://www.91jisudai.com/Mobile/creditredirect"]) {
-                if ([html rangeOfString:@"bank_id/15"].length || [html rangeOfString:@"bank_id/1"].length ||[html rangeOfString:@"bank_id/43"].length || [html rangeOfString:@"bank_id/8"].length) {
+                if ([html rangeOfString:@"bank_id/15/ref"].length || [html rangeOfString:@"bank_id/1/ref"].length ||[html rangeOfString:@"bank_id/43/ref"].length || [html rangeOfString:@"bank_id/8/ref"].length) {
                     UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
                     nav.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
                     nav.textAlignment = NSTextAlignmentCenter;
                     nav.textColor = [UIColor whiteColor];
                     nav.font = [UIFont systemFontOfSize:18];
                     [_webView.scrollView addSubview:nav];
-                    if ([html rangeOfString:@"bank_id/15"].length ) {
+                    
+                    if ([html rangeOfString:@"bank_id/15/ref"].length ) {
                         nav.text = @"平安银行";
                         nav.frame = CGRectMake(0, 0, self.frame.size.width, 54);
-                    }else if ([html rangeOfString:@"bank_id/1"].length) {
+                    }else if ([html rangeOfString:@"bank_id/1/ref"].length) {
                         nav.text = @"招商银行";
-                    }else if([html rangeOfString:@"bank_id/43"].length) {
+                    }else if([html rangeOfString:@"bank_id/43/ref"].length) {
                         nav.text = @"花旗银行";
-                    }else if ([html rangeOfString:@"bank_id/8"].length) {
+                    }else if ([html rangeOfString:@"bank_id/8/ref"].length) {
                         nav.text = @"浦发银行";
                     }
+                }else  {
+                    UILabel *nav = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
+                    nav.backgroundColor = [UIColor colorWithHexColorString:@"00d0df"];
+                    nav.textAlignment = NSTextAlignmentCenter;
+                    nav.textColor = [UIColor whiteColor];
+                    nav.font = [UIFont systemFontOfSize:18];
+                    nav.text = @"申请信用卡";
+                    [_webView.scrollView addSubview:nav];
                 }
                 
             }else if ([html hasPrefix:@"http://www.91jisudai.com/Mobile/creditapply"]) {

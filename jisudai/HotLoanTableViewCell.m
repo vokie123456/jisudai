@@ -33,8 +33,8 @@
     _dic = dic;
     [_img sd_setImageWithURL:[NSURL URLWithString:[[dic objectForKey:@"imgUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
     _name.text = [dic objectForKey:@"name"];
-    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"人申请数：%@人",[dic objectForKey:@"applyNum"]]];
-    NSRange range = [[NSString stringWithFormat:@"人申请数：%@人",[dic objectForKey:@"applyNum"]] rangeOfString:[NSString stringWithFormat:@"%@人",[dic objectForKey:@"applyNum"]]];
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"申请人数：%@人",[dic objectForKey:@"applyNum"]]];
+    NSRange range = [[NSString stringWithFormat:@"申请人数：%@人",[dic objectForKey:@"applyNum"]] rangeOfString:[NSString stringWithFormat:@"%@人",[dic objectForKey:@"applyNum"]]];
     [string addAttribute:NSForegroundColorAttributeName  value:[UIColor colorWithHexColorString:@"ff2050"] range:range];
     _num.attributedText = string;
     

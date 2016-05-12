@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JCCBaseViewController.h"
 
-@interface LoanDetailViewController : UIViewController
+@interface LoanDetailViewController : JCCBaseViewController
 @property(nonatomic,strong)BmobObject *object;
 
 @end

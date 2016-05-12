@@ -42,7 +42,7 @@
         self.adImagePlayerView.height = 330.f;
     }
     self.ads = @[@"banner1",@"banner2",@"banner3"];
-    self.topArray = @[@{@"icon":@"xedk",@"title":@"小额贷款",@"des":@"上班族学生",@"lable":@"秒批"},@{@"icon":@"dedk",@"title":@"大额贷款",@"des":@"企业房车贷",@"lable":@"推荐"},@{@"icon":@"xyk",@"title":@"信用卡",@"des":@"省心省力",@"lable":@""},@{@"icon":@"xindaijingli",@"title":@"信贷经理",@"des":@"入驻抢单",@"lable":@""}];
+    self.topArray = @[@{@"icon":@"xedk",@"title":@"小额贷款",@"des":@"上班族学生",@"lable":@"秒批"},@{@"icon":@"dedk",@"title":@"大额贷款",@"des":@"企业房车贷",@"lable":@"推荐"},@{@"icon":@"xyk",@"title":@"信用卡",@"des":@"省心省力",@"lable":@""},@{@"icon":@"xindaijingli",@"title":@"在线预约",@"des":@"办卡上门服务",@"lable":@""}];
     [_adImagePlayerView initWithCount:3 delegate:self];
 
     [self updateData];
@@ -65,7 +65,7 @@
 
 
 - (void)updateData {
-    [[HTTPRequestManager manager] POST:@"HotLLoan1" dictionary:@{} page:1 success:^(id responseObject) {
+    [[HTTPRequestManager manager] POST:@"HotLLoan2" dictionary:@{} page:1 success:^(id responseObject) {
         self.hotLoanArray = responseObject;
         [self.tableView reloadData];
         if ([self.tableView.mj_header isRefreshing]) {
@@ -229,12 +229,19 @@
         web.url = HaoDaiCreditURL;
         [self.navigationController pushViewController:web animated:YES];
     }else if (index == 3) {
-        [MobClick event:@"CreditManager"];
-        CreditManagerViewController *web = [[CreditManagerViewController alloc] init];
-        web.url = XingDaiManagerURL;
+        
+        
+        JCCBaseWebViewController *web = [[JCCBaseWebViewController alloc] init];
         web.hidesBottomBarWhenPushed = YES;
-        web.title = @"信贷经理入驻";
+        web.url = HaoDaiCreditZaiXianYuYue;
         [self.navigationController pushViewController:web animated:YES];
+        
+//        [MobClick event:@"CreditManager"];
+//        CreditManagerViewController *web = [[CreditManagerViewController alloc] init];
+//        web.url = XingDaiManagerURL;
+//        web.hidesBottomBarWhenPushed = YES;
+//        web.title = @"信贷经理入驻";
+//        [self.navigationController pushViewController:web animated:YES];
     }
 }
 

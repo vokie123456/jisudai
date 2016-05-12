@@ -15,6 +15,13 @@
 		186CF4031CD34D9A00CF612B /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF4011CD34D9A00CF612B /* ASProgressPopUpView.m */; };
 		186CF4061CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF4051CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.m */; };
 		186CF4091CD368B000CF612B /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF4081CD368B000CF612B /* CommentViewController.m */; };
+		186CF4151CDEF72900CF612B /* GuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF4141CDEF72900CF612B /* GuideView.m */; };
+		186CF4181CDF573700CF612B /* JCCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CF4171CDF573700CF612B /* JCCBaseViewController.m */; };
+		186CF4351CE3727600CF612B /* PPDLoan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 186CF4331CE3727600CF612B /* PPDLoan.bundle */; };
+		186CF4361CE3727600CF612B /* rlibLoansSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 186CF4341CE3727600CF612B /* rlibLoansSDK.a */; };
+		186CF4381CE372A600CF612B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 186CF4371CE372A600CF612B /* libsqlite3.tbd */; };
+		186CF43A1CE372BE00CF612B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 186CF4391CE372BE00CF612B /* libstdc++.tbd */; };
+		186CF43C1CE372CA00CF612B /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 186CF43B1CE372CA00CF612B /* libiconv.tbd */; };
 		18DA9F911CBFDD920087E2E6 /* HTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA9F901CBFDD920087E2E6 /* HTTPRequestManager.m */; };
 		18DA9F941CC10A1A0087E2E6 /* LoanProgressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA9F931CC10A1A0087E2E6 /* LoanProgressTableViewController.m */; };
 		1F7FF2B772D5573A48E68B20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFF7A3F2BF16D036C8E217C /* libPods.a */; };
@@ -27,7 +34,6 @@
 		AE19DAA61CBF401000E601E5 /* HotBankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE19DAA41CBF401000E601E5 /* HotBankView.xib */; };
 		AE19DAAA1CBF4D5500E601E5 /* HotLoanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAA91CBF4D5500E601E5 /* HotLoanTableViewCell.m */; };
 		AE19DAAD1CBF4D6800E601E5 /* HotCreditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */; };
-		AE19DAB21CC0C9C400E601E5 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19DAB11CC0C9C400E601E5 /* share.png */; };
 		AE7A01091C9675A60058045F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A01081C9675A60058045F /* main.m */; };
 		AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7A010B1C9675A60058045F /* AppDelegate.m */; };
 		AE7A01121C9675A60058045F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7A01101C9675A60058045F /* Main.storyboard */; };
@@ -96,6 +102,18 @@
 		186CF4051CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
 		186CF4071CD368B000CF612B /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
 		186CF4081CD368B000CF612B /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		186CF4131CDEF72900CF612B /* GuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideView.h; sourceTree = "<group>"; };
+		186CF4141CDEF72900CF612B /* GuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideView.m; sourceTree = "<group>"; };
+		186CF4161CDF573700CF612B /* JCCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCBaseViewController.h; sourceTree = "<group>"; };
+		186CF4171CDF573700CF612B /* JCCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCBaseViewController.m; sourceTree = "<group>"; };
+		186CF4301CE3727600CF612B /* LoansSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoansSDK.h; sourceTree = "<group>"; };
+		186CF4311CE3727600CF612B /* PPDLoanSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDLoanSdk.h; sourceTree = "<group>"; };
+		186CF4321CE3727600CF612B /* PPDRsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDRsa.h; sourceTree = "<group>"; };
+		186CF4331CE3727600CF612B /* PPDLoan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PPDLoan.bundle; sourceTree = "<group>"; };
+		186CF4341CE3727600CF612B /* rlibLoansSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = rlibLoansSDK.a; sourceTree = "<group>"; };
+		186CF4371CE372A600CF612B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		186CF4391CE372BE00CF612B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		186CF43B1CE372CA00CF612B /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		18DA9F8F1CBFDD920087E2E6 /* HTTPRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequestManager.h; sourceTree = "<group>"; };
 		18DA9F901CBFDD920087E2E6 /* HTTPRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequestManager.m; sourceTree = "<group>"; };
 		18DA9F921CC10A1A0087E2E6 /* LoanProgressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanProgressTableViewController.h; sourceTree = "<group>"; };
@@ -121,7 +139,6 @@
 		AE19DAA91CBF4D5500E601E5 /* HotLoanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotLoanTableViewCell.m; sourceTree = "<group>"; };
 		AE19DAAB1CBF4D6800E601E5 /* HotCreditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCreditTableViewCell.h; sourceTree = "<group>"; };
 		AE19DAAC1CBF4D6800E601E5 /* HotCreditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCreditTableViewCell.m; sourceTree = "<group>"; };
-		AE19DAB11CC0C9C400E601E5 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		AE7A01041C9675A60058045F /* jisudai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jisudai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7A01081C9675A60058045F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE7A010A1C9675A60058045F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -191,11 +208,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186CF43C1CE372CA00CF612B /* libiconv.tbd in Frameworks */,
+				186CF43A1CE372BE00CF612B /* libstdc++.tbd in Frameworks */,
+				186CF4381CE372A600CF612B /* libsqlite3.tbd in Frameworks */,
 				AEE825C11CB7849E00690130 /* libc++.tbd in Frameworks */,
 				AEE825BF1CB77FAC00690130 /* Foundation.framework in Frameworks */,
 				AEE825BD1CB77FA200690130 /* UIKit.framework in Frameworks */,
 				AEE825BB1CB77F9800690130 /* SystemConfiguration.framework in Frameworks */,
 				AEE825B91CB77F8C00690130 /* CoreTelephony.framework in Frameworks */,
+				186CF4361CE3727600CF612B /* rlibLoansSDK.a in Frameworks */,
 				AEE825B71CB77F7500690130 /* libsqlite3.0.tbd in Frameworks */,
 				AEE825B51CB77F6600690130 /* libz.tbd in Frameworks */,
 				AEE825B11CB763E100690130 /* libWeChatSDK.a in Frameworks */,
@@ -220,6 +241,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186CF42F1CE3725300CF612B /* PaiPaiDai */ = {
+			isa = PBXGroup;
+			children = (
+				186CF4301CE3727600CF612B /* LoansSDK.h */,
+				186CF4311CE3727600CF612B /* PPDLoanSdk.h */,
+				186CF4321CE3727600CF612B /* PPDRsa.h */,
+				186CF4331CE3727600CF612B /* PPDLoan.bundle */,
+				186CF4341CE3727600CF612B /* rlibLoansSDK.a */,
+			);
+			name = PaiPaiDai;
+			sourceTree = "<group>";
+		};
 		703F736FCA72BD7737F4A9C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,7 +367,6 @@
 		AE7A01061C9675A60058045F /* jisudai */ = {
 			isa = PBXGroup;
 			children = (
-				AE19DAB11CC0C9C400E601E5 /* share.png */,
 				AE7A010A1C9675A60058045F /* AppDelegate.h */,
 				AE7A010B1C9675A60058045F /* AppDelegate.m */,
 				AE7A01101C9675A60058045F /* Main.storyboard */,
@@ -379,6 +411,8 @@
 		AE7A01431C96AFA00058045F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				186CF4131CDEF72900CF612B /* GuideView.h */,
+				186CF4141CDEF72900CF612B /* GuideView.m */,
 				AEE8BEF51CAE571B00064618 /* ZYTextField.h */,
 				AEE8BEF61CAE571B00064618 /* ZYTextField.m */,
 				AE7A01511C96C4D30058045F /* ZYTabViewController.h */,
@@ -387,6 +421,8 @@
 				AE7A014F1C96BEB60058045F /* ZYNavigationViewController.m */,
 				AE7A013D1C96AF110058045F /* JCCBaseWebViewController.h */,
 				AE7A013E1C96AF110058045F /* JCCBaseWebViewController.m */,
+				186CF4161CDF573700CF612B /* JCCBaseViewController.h */,
+				186CF4171CDF573700CF612B /* JCCBaseViewController.m */,
 				AE7A01401C96AF200058045F /* MKWebView.h */,
 				AE7A01411C96AF200058045F /* MKWebView.m */,
 				AE19DA961CBF3AA700E601E5 /* ImagePlayerView.h */,
@@ -446,6 +482,7 @@
 		AEE825B31CB763F600690130 /* ThreePublic */ = {
 			isa = PBXGroup;
 			children = (
+				186CF42F1CE3725300CF612B /* PaiPaiDai */,
 				186CF4041CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.h */,
 				186CF4051CD35D2500CF612B /* UITableView+FDTemplateLayoutCell.m */,
 				186CF3FE1CD34D9A00CF612B /* ASPopUpView.h */,
@@ -462,6 +499,9 @@
 		FC78667ADE3516AE725D53FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				186CF43B1CE372CA00CF612B /* libiconv.tbd */,
+				186CF4391CE372BE00CF612B /* libstdc++.tbd */,
+				186CF4371CE372A600CF612B /* libsqlite3.tbd */,
 				AEE825CD1CBB6FAB00690130 /* libxml2.tbd */,
 				AEE825C01CB7849E00690130 /* libc++.tbd */,
 				AEE825BE1CB77FAC00690130 /* Foundation.framework */,
@@ -586,7 +626,7 @@
 				AE7A01141C9675A60058045F /* Assets.xcassets in Resources */,
 				AE7A01121C9675A60058045F /* Main.storyboard in Resources */,
 				AE19DAA61CBF401000E601E5 /* HotBankView.xib in Resources */,
-				AE19DAB21CC0C9C400E601E5 /* share.png in Resources */,
+				186CF4351CE3727600CF612B /* PPDLoan.bundle in Resources */,
 				AEE825B21CB763E100690130 /* read_me.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,6 +705,7 @@
 				AE7A013F1C96AF110058045F /* JCCBaseWebViewController.m in Sources */,
 				AE7A010C1C9675A60058045F /* AppDelegate.m in Sources */,
 				AEE8BEF71CAE571B00064618 /* ZYTextField.m in Sources */,
+				186CF4151CDEF72900CF612B /* GuideView.m in Sources */,
 				AE7A01091C9675A60058045F /* main.m in Sources */,
 				AE19DAAA1CBF4D5500E601E5 /* HotLoanTableViewCell.m in Sources */,
 				AE7A01931C9B9EFA0058045F /* KLReachabilityManager.m in Sources */,
@@ -693,6 +734,7 @@
 				186CF4021CD34D9A00CF612B /* ASPopUpView.m in Sources */,
 				AEE8BEF41CAE570C00064618 /* UITextView+Placeholder.m in Sources */,
 				AE19DAA11CBF3E3100E601E5 /* HomeTableViewCell.m in Sources */,
+				186CF4181CDF573700CF612B /* JCCBaseViewController.m in Sources */,
 				186CF4031CD34D9A00CF612B /* ASProgressPopUpView.m in Sources */,
 				AE19DA901CBF38AD00E601E5 /* WEHelper.m in Sources */,
 				AEE8BEFC1CAE5B6000064618 /* UIViewExt.m in Sources */,
@@ -838,8 +880,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/jisudai-PrefixHeader.pch";
 				INFOPLIST_FILE = jisudai/Info.plist;
@@ -852,7 +895,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5ba521f1-d22e-40f2-944a-f1f08fb8022e";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -865,8 +908,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yong Zhou (X92C369FEQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/jisudai-PrefixHeader.pch";
 				INFOPLIST_FILE = jisudai/Info.plist;
@@ -879,7 +923,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoya.jisudai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5ba521f1-d22e-40f2-944a-f1f08fb8022e";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

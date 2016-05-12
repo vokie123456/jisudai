@@ -31,6 +31,7 @@
     self.tableView.showsVerticalScrollIndicator = NO;
     self.title = [self.object objectForKey:@"name"];
     _currentPage = 1;
+    [self feachData];
     WEAKSELF;
     self.tableView.mj_footer =  [MJRefreshAutoFooter footerWithRefreshingBlock:^{
         // 进入刷新状态后会自动调用这个block
@@ -50,8 +51,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
-    _currentPage = 1;
-    [self feachData];
 }
 
 - (void)feachData {
@@ -64,7 +63,6 @@
             [self.dataSource removeAllObjects];
             [self.dataSource addObjectsFromArray:responseObject];
         }
-       
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         if ([self.tableView.mj_footer isRefreshing]) {
@@ -152,12 +150,22 @@
 
 - (IBAction)goLoan:(id)sender {
     [MobClick event:@"hotLoan" attributes:@{@"name":[self.object objectForKey:@"name"]}];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[[self.object objectForKey:@"linkUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    if ([[self.object objectForKey:@"linkUrl"] isEqualToString:@"1"]) {
+        [LoansSDK showLoanSdkView];
+    }else {
+      [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[[self.object objectForKey:@"linkUrl"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    }
 }
 
 - (IBAction)goComment:(id)sender {
     CommentViewController *comment = StoryBoardDefined(@"CommentViewController");
     comment.hotLoanId = [self.object objectForKey:@"objectId"];
+    WEAKSELF;
+    comment.block = ^() {
+        _currentPage = 1;
+        STRONGSELF;
+        [strongSelf feachData];
+    };
     [self.navigationController pushViewController:comment animated:YES];
 }
 

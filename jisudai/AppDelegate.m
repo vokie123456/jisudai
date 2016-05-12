@@ -10,9 +10,10 @@
 #import "MobClick.h"
 #import <BmobSDK/Bmob.h>
 #import "WXApi.h"
+#import "GuideView.h"
 
 @interface AppDelegate ()<WXApiDelegate>
-
+@property (nonatomic, strong)  GuideView *guideView;
 @end
 
 @implementation AppDelegate
@@ -21,7 +22,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    
     
     [MobClick startWithAppkey:YouMeng_Key reportPolicy:SEND_INTERVAL   channelId:@"AppStore"];
     [Bmob  registerWithAppKey:BmobApplicationID];
@@ -40,7 +40,36 @@
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
     }
     [WXApi registerApp:WEIXING_KEY];
+    [LoansSDK loadPPDLoanInit:PAIPAIDAIKEY];
+    [self.window makeKeyAndVisible];
+    if (mIsiphone) {
+//      引导页
+        NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+        if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"firstLaunch"] isEqualToString:currentVersion]) {
+            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"firstLaunch"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [self firstLaunch];
+        }
+    }
     return YES;
+}
+
+#pragma mark -
+- (void)firstLaunch {
+    if (_guideView == nil) {
+        _guideView = [[GuideView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        [_guideView.backButton addTarget:self action:@selector(didSelectedStartButton) forControlEvents:UIControlEventTouchUpInside];
+        [self.window addSubview:_guideView];
+    }
+}
+
+- (void)didSelectedStartButton {
+    [UIView animateWithDuration:2  animations:^{
+        _guideView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [_guideView removeFromSuperview];
+        _guideView = nil;
+    }];
 }
 
 
