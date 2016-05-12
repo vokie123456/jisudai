@@ -34,8 +34,11 @@
 //鼎及贷
 #define DingJiDai @"http://m.9263.com/active/register.html?channelCode=91jsd"
 
-//融360
+//融360贷款
 #define Rong360 @"http://m.rong360.com/express?from=sem21&utm_source=91jsd&utm_medium=cpa&utm_campaign=sem21"
+
+//融360信用卡
+#define Rong360Credit @"http://m.rong360.com/credit/card/landing/5?utm_source=91&utm_medium=91_xyk&utm_campaign=landing5"
 
 //办卡进度
 #define BanKaProgress @"http://8.yun.haodai.com/Public/progressinquiry"

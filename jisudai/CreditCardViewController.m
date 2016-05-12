@@ -21,8 +21,8 @@
     //  那
     _loadFail = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    _webView = [[MKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 49) url:@"http://www.91jisudai.com/Mobile/creditcard/" type:@"1"];
+     
+    _webView = [[MKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 49) url:Rong360Credit type:@"1"];
     _webView.delegate = self;
     [self.view addSubview:_webView];
     
@@ -39,8 +39,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     if (_webView && _loadFail) {
-//       NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.91jisudai.com/Mobile/creditcard/"] cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:60];
-        [_webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.91jisudai.com/Mobile/creditcard/"]]];
+        [_webView.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:Rong360Credit]]];
     }
 }
 

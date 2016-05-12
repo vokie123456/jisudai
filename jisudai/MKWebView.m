@@ -91,15 +91,13 @@
             }else if([html hasPrefix:@"http://interface.api.haodai.com"]){
                 nav.text = @"大额贷款(1万以上)";
             }else {
-                nav.text = @"申请信用卡";
+                nav.text = @"信用卡申请";
                 nav.frame = CGRectMake(0, 0, self.frame.size.width, 44);
             }
             nav.textAlignment = NSTextAlignmentCenter;
             nav.textColor = [UIColor whiteColor];
             nav.font = [UIFont systemFontOfSize:18];
         }
-        
-        
        
         if (_type == 2) {
             
@@ -156,6 +154,8 @@
 #pragma mark - UIWebViewDelegate
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [[webView viewWithTag:KTagActivitity] removeFromSuperview];
+    _back.hidden = NO;
+    _mast.hidden = NO;
     if ([self.delegate respondsToSelector:@selector(webLoadFail)]) {
         [self.delegate webLoadFail];
     }
